@@ -1,0 +1,73 @@
+import { useEffect, useState } from "react";
+import heroTarget from "@/assets/hero-target.png";
+
+const slides = [
+  {
+    eyebrow: "Strategy → Execution",
+    headline: ["Is poor execution", "slowing your growth?"],
+    body: "Translate strategy into disciplined action that drives measurable results.",
+    cta: { label: "Learn More", href: "#strategy" },
+  },
+  {
+    eyebrow: "People Development",
+    headline: ["Are your people equipped", "to perform at your pace?"],
+    body: "Build the capability, mindset, and confidence your business demands.",
+    cta: { label: "Learn More", href: "#people" },
+  },
+  {
+    eyebrow: "Culture Transformation",
+    headline: ["Is your culture lifting you", "or silently limiting you?"],
+    body: "Reshape the operating system so performance compounds, not erodes.",
+    cta: { label: "Learn More", href: "#culture" },
+  },
+];
+
+export function HeroRotator() {
+  const [i, setI] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setI((n) => (n + 1) % slides.length), 6000);
+    return () => clearInterval(id);
+  }, []);
+  const s = slides[i];
+  return (
+    <section id="home" className="relative overflow-hidden">
+      <div className="mx-auto max-w-7xl px-6 md:px-10 pt-16 pb-24 md:pt-24 md:pb-32 grid md:grid-cols-[1.15fr_1fr] gap-12 items-center">
+        <div>
+          <p className="text-xs uppercase tracking-[0.25em] text-[var(--cyan-accent)] font-semibold mb-6">
+            {s.eyebrow}
+          </p>
+          <h1 className="text-[clamp(2.75rem,6vw,5.25rem)] leading-[0.98] font-bold text-[var(--cyan-accent)]">
+            {s.headline[0]}
+            <br />
+            <span className="text-[var(--navy)]">{s.headline[1]}</span>
+          </h1>
+          <p className="mt-8 text-lg text-muted-foreground max-w-xl">{s.body}</p>
+          <div className="mt-10 flex flex-wrap gap-4">
+            <a href={s.cta.href} className="btn-pill-primary">{s.cta.label}</a>
+            <a href="#approach" className="btn-pill">How we work</a>
+          </div>
+          <div className="mt-14 flex gap-2">
+            {slides.map((_, n) => (
+              <button
+                key={n}
+                onClick={() => setI(n)}
+                aria-label={`Slide ${n + 1}`}
+                className={`h-1.5 rounded-full transition-all ${n === i ? "w-10 bg-[var(--cyan-accent)]" : "w-4 bg-border"}`}
+              />
+            ))}
+          </div>
+        </div>
+        <div className="relative">
+          <div className="absolute -inset-8 bg-[var(--cyan-accent)]/5 rounded-full blur-3xl" aria-hidden />
+          <img
+            src={heroTarget}
+            alt="Dart hitting the bullseye — precision execution"
+            width={1024}
+            height={1024}
+            className="relative w-full max-w-lg mx-auto"
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
