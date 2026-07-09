@@ -32,21 +32,21 @@
 :root {
   --radius: 0.75rem;
   --background: oklch(1 0 0);
-  --foreground: oklch(0.18 0.05 260);
-  --navy: oklch(0.22 0.08 258);
-  --cyan-accent: oklch(0.72 0.16 232);
+  --foreground: oklch(0.20 0.06 215);
+  --navy: oklch(0.28 0.09 220);
+  --cyan-accent: oklch(0.68 0.15 175);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.18 0.05 260);
-  --primary: oklch(0.22 0.08 258);
+  --card-foreground: oklch(0.20 0.06 215);
+  --primary: oklch(0.28 0.09 220);
   --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.97 0.01 250);
-  --secondary-foreground: oklch(0.22 0.08 258);
-  --muted: oklch(0.96 0.005 250);
-  --muted-foreground: oklch(0.48 0.03 258);
-  --accent: oklch(0.72 0.16 232);
+  --secondary: oklch(0.97 0.02 190);
+  --secondary-foreground: oklch(0.28 0.09 220);
+  --muted: oklch(0.96 0.01 190);
+  --muted-foreground: oklch(0.48 0.04 215);
+  --accent: oklch(0.68 0.15 175);
   --accent-foreground: oklch(1 0 0);
-  --border: oklch(0.92 0.01 250);
-  --ring: oklch(0.72 0.16 232);
+  --border: oklch(0.92 0.02 190);
+  --ring: oklch(0.68 0.15 175);
 }
 
 @layer base {
