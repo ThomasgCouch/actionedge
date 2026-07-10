@@ -98,3 +98,15 @@
   transition: all 0.2s ease;
   box-shadow: 0 8px 24px -8px color-mix(in oklab, var(--cyan-accent) 60%, transparent);
 }
+@utility btn-pill-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.75rem;
+  border-radius: 9999px;
+  border: 1.5px solid currentColor;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: white;
+  transition: all 0.2s ease;
+}
