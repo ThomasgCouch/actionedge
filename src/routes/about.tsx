@@ -177,7 +177,7 @@ function AboutPage() {
               {reasons.map((r, i) => (
                 <article
                   key={r.title}
-                  className="rounded-2xl border border-border bg-white p-6 hover:border-[var(--cyan-accent)] transition-colors"
+                  className="group rounded-2xl border border-border bg-white p-6 hover:border-[var(--cyan-accent)] transition-colors overflow-hidden"
                 >
                   <span className="text-sm font-mono text-[var(--cyan-accent)]">
                     {String(i + 1).padStart(2, "0")}
@@ -185,7 +185,9 @@ function AboutPage() {
                   <h3 className="mt-3 text-lg font-bold text-[var(--navy)] leading-tight">
                     {r.title}
                   </h3>
-                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{r.body}</p>
+                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-40 transition-all duration-500 ease-out">
+                    {r.body}
+                  </p>
                 </article>
               ))}
             </div>
