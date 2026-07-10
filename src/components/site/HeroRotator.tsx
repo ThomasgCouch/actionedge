@@ -48,13 +48,16 @@ export function HeroRotator() {
                 </p>
                 <h1 className="text-[clamp(2.75rem,6vw,5.25rem)] leading-[0.98] font-bold text-[var(--cyan-accent)]">
                   {s.headline[0]}
-                  <br />
-                  <span className="text-[var(--navy)]">{s.headline[1]}</span>
+                  {s.headline[1] && (
+                    <>
+                      <br />
+                      <span className="text-[var(--navy)]">{s.headline[1]}</span>
+                    </>
+                  )}
                 </h1>
-                <p className="mt-8 text-lg text-muted-foreground max-w-xl">{s.body}</p>
                 <div className="mt-10 flex flex-wrap gap-4">
-                  <a href={s.cta.href} className="btn-pill-primary">{s.cta.label}</a>
-                  <a href="#approach" className="btn-pill">How we work</a>
+                  <Link to={s.cta.to} className="btn-pill-primary">{s.cta.label}</Link>
+                  <Link to="/about" className="btn-pill">How we work</Link>
                 </div>
               </div>
             ))}
