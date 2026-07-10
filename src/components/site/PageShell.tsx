@@ -17,16 +17,18 @@ export function PageHero({
   title,
   intro,
 }: {
-  eyebrow: string;
+  eyebrow?: string;
   title: string;
   intro?: string;
 }) {
   return (
     <section className="border-b border-border">
       <div className="mx-auto max-w-7xl px-6 md:px-10 py-20 md:py-28">
-        <p className="text-xs uppercase tracking-[0.25em] text-[var(--cyan-accent)] font-semibold mb-6">
-          {eyebrow}
-        </p>
+        {eyebrow && (
+          <p className="text-xs uppercase tracking-[0.25em] text-[var(--cyan-accent)] font-semibold mb-6">
+            {eyebrow}
+          </p>
+        )}
         <h1 className="text-4xl md:text-6xl font-bold text-[var(--navy)] leading-tight max-w-4xl">
           {title}
         </h1>
