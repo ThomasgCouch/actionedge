@@ -40,8 +40,6 @@ export function Newsletter() {
   );
 }
 
-import logoAsset from "@/assets/actionedge-logo.jpeg.asset.json";
-
 export function Footer() {
   return (
     <footer className="border-t border-border">
