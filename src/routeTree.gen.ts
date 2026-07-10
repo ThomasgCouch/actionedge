@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as StrategicThinkingRouteImport } from './routes/strategic-thinking'
 import { Route as PeopleDevelopmentRouteImport } from './routes/people-development'
 import { Route as OrgDesignCultureRouteImport } from './routes/org-design-culture'
+import { Route as EventsRouteImport } from './routes/events'
 import { Route as DiscRouteImport } from './routes/disc'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
@@ -30,6 +31,11 @@ const PeopleDevelopmentRoute = PeopleDevelopmentRouteImport.update({
 const OrgDesignCultureRoute = OrgDesignCultureRouteImport.update({
   id: '/org-design-culture',
   path: '/org-design-culture',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EventsRoute = EventsRouteImport.update({
+  id: '/events',
+  path: '/events',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DiscRoute = DiscRouteImport.update({
@@ -58,6 +64,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/disc': typeof DiscRoute
+  '/events': typeof EventsRoute
   '/org-design-culture': typeof OrgDesignCultureRoute
   '/people-development': typeof PeopleDevelopmentRoute
   '/strategic-thinking': typeof StrategicThinkingRoute
@@ -67,6 +74,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/disc': typeof DiscRoute
+  '/events': typeof EventsRoute
   '/org-design-culture': typeof OrgDesignCultureRoute
   '/people-development': typeof PeopleDevelopmentRoute
   '/strategic-thinking': typeof StrategicThinkingRoute
@@ -77,6 +85,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/disc': typeof DiscRoute
+  '/events': typeof EventsRoute
   '/org-design-culture': typeof OrgDesignCultureRoute
   '/people-development': typeof PeopleDevelopmentRoute
   '/strategic-thinking': typeof StrategicThinkingRoute
@@ -88,6 +97,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/disc'
+    | '/events'
     | '/org-design-culture'
     | '/people-development'
     | '/strategic-thinking'
@@ -97,6 +107,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/disc'
+    | '/events'
     | '/org-design-culture'
     | '/people-development'
     | '/strategic-thinking'
@@ -106,6 +117,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/disc'
+    | '/events'
     | '/org-design-culture'
     | '/people-development'
     | '/strategic-thinking'
@@ -116,6 +128,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
   DiscRoute: typeof DiscRoute
+  EventsRoute: typeof EventsRoute
   OrgDesignCultureRoute: typeof OrgDesignCultureRoute
   PeopleDevelopmentRoute: typeof PeopleDevelopmentRoute
   StrategicThinkingRoute: typeof StrategicThinkingRoute
@@ -142,6 +155,13 @@ declare module '@tanstack/react-router' {
       path: '/org-design-culture'
       fullPath: '/org-design-culture'
       preLoaderRoute: typeof OrgDesignCultureRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/events': {
+      id: '/events'
+      path: '/events'
+      fullPath: '/events'
+      preLoaderRoute: typeof EventsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/disc': {
@@ -180,6 +200,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
   DiscRoute: DiscRoute,
+  EventsRoute: EventsRoute,
   OrgDesignCultureRoute: OrgDesignCultureRoute,
   PeopleDevelopmentRoute: PeopleDevelopmentRoute,
   StrategicThinkingRoute: StrategicThinkingRoute,
