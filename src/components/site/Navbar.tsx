@@ -10,9 +10,9 @@ export function Navbar() {
   ];
   return (
     <header className="sticky top-0 z-50 backdrop-blur-md bg-background/85 border-b border-border/60">
-      <div className="mx-auto max-w-7xl px-6 md:px-10 h-20 flex items-center justify-between">
-        <a href="#home" className="flex items-center gap-2">
-          <img src={logoAsset.url} alt="ActionEDGE" className="h-10 w-auto" />
+      <div className="mx-auto max-w-7xl px-6 md:px-10 h-24 flex items-center justify-between">
+        <a href="#home" className="flex items-center">
+          <img src={logoAsset.url} alt="ActionEDGE" className="h-16 md:h-20 w-auto object-contain" />
         </a>
         <nav className="hidden md:flex items-center gap-8">
           {links.map((l) => (
