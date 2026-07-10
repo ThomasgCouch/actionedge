@@ -51,15 +51,15 @@ export function Navbar() {
       </div>
       {open && (
         <div className="lg:hidden border-t border-border bg-background">
-          <nav className="mx-auto max-w-7xl px-6 py-4 flex flex-col gap-3">
+          <nav className="mx-auto max-w-7xl px-6 py-4 flex flex-col gap-1">
             {links.map((l) => (
               <Link
                 key={l.to}
                 to={l.to}
                 activeOptions={{ exact: true }}
-                activeProps={{ className: "text-[var(--cyan-accent)]" }}
+                inactiveProps={{ className: "text-base text-[var(--navy)]/80 hover:text-[var(--cyan-accent)] transition-colors py-3 px-3" }}
+                activeProps={{ className: "text-base rounded-lg bg-[var(--cyan-accent)]/10 text-[var(--cyan-accent)] font-semibold py-3 px-3" }}
                 onClick={() => setOpen(false)}
-                className="text-base text-[var(--navy)]/80 hover:text-[var(--cyan-accent)] transition-colors py-2"
               >
                 {l.label}
               </Link>
