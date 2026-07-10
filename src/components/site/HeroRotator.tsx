@@ -1,24 +1,29 @@
+import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import heroTarget from "@/assets/hero-target.png";
 
 const slides = [
   {
     eyebrow: "Strategy → Execution",
-    headline: ["Is poor execution", "slowing your growth?"],
-    body: "Translate strategy into disciplined action that drives measurable results.",
-    cta: { label: "Learn More", href: "#strategy" },
+    headline: [
+      "Is poor execution slowing your growth?",
+      "Translate your strategy to drive your results...",
+    ],
+    cta: { label: "Learn More", to: "/strategic-thinking" },
   },
   {
     eyebrow: "People Development",
-    headline: ["Are your people equipped", "to perform at your pace?"],
-    body: "Build the capability, mindset, and confidence your business demands.",
-    cta: { label: "Learn More", href: "#people" },
+    headline: [
+      "Are your people equipped to perform at the level your business demands?",
+    ],
+    cta: { label: "Learn More", to: "/people-development" },
   },
   {
     eyebrow: "Culture Transformation",
-    headline: ["Is your culture lifting you", "or silently limiting you?"],
-    body: "Reshape the operating system so performance compounds, not erodes.",
-    cta: { label: "Learn More", href: "#culture" },
+    headline: [
+      "Is your culture strengthening performance or silently limiting your organization's potential?",
+    ],
+    cta: { label: "Learn More", to: "/org-design-culture" },
   },
 ];
 
@@ -43,13 +48,16 @@ export function HeroRotator() {
                 </p>
                 <h1 className="text-[clamp(2.75rem,6vw,5.25rem)] leading-[0.98] font-bold text-[var(--cyan-accent)]">
                   {s.headline[0]}
-                  <br />
-                  <span className="text-[var(--navy)]">{s.headline[1]}</span>
+                  {s.headline[1] && (
+                    <>
+                      <br />
+                      <span className="text-[var(--navy)]">{s.headline[1]}</span>
+                    </>
+                  )}
                 </h1>
-                <p className="mt-8 text-lg text-muted-foreground max-w-xl">{s.body}</p>
                 <div className="mt-10 flex flex-wrap gap-4">
-                  <a href={s.cta.href} className="btn-pill-primary">{s.cta.label}</a>
-                  <a href="#approach" className="btn-pill">How we work</a>
+                  <Link to={s.cta.to} className="btn-pill-primary">{s.cta.label}</Link>
+                  <Link to="/about" className="btn-pill">How we work</Link>
                 </div>
               </div>
             ))}
