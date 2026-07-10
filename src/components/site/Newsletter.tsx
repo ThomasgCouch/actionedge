@@ -1,3 +1,6 @@
+import { Link } from "@tanstack/react-router";
+import logoAsset from "@/assets/actionedge-logo.jpeg.asset.json";
+
 export function Newsletter() {
   return (
     <section id="contact" className="mx-auto max-w-7xl px-6 md:px-10 py-24 md:py-32">
