@@ -72,16 +72,6 @@ export function HeroRotator() {
             ))}
           </div>
         </div>
-        <div className="relative">
-          <div className="absolute -inset-8 bg-[var(--cyan-accent)]/5 rounded-full blur-3xl" aria-hidden />
-          <img
-            src={heroTarget}
-            alt="Dart hitting the bullseye — precision execution"
-            width={1024}
-            height={1024}
-            className="relative w-full max-w-lg mx-auto"
-          />
-        </div>
       </div>
     </section>
   );
