@@ -42,7 +42,6 @@ function OrgPage() {
   return (
     <PageShell>
       <PageHero
-        eyebrow="Service 03"
         title="Organisational Design & Culture Transformation"
         intro="Is your culture strengthening performance — or silently limiting your potential? We redesign the way work happens so structure, systems and culture start amplifying growth."
       />

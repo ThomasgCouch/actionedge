@@ -42,7 +42,6 @@ function StrategyPage() {
   return (
     <PageShell>
       <PageHero
-        eyebrow="Service 01"
         title="Strategic Thinking & Execution Planning"
         intro="Is poor execution slowing your growth? We translate ambition into a sharp, sequenced plan your organisation can actually run — with cadence on delivery and discipline on outcomes."
       />

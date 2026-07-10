@@ -39,7 +39,6 @@ function PeoplePage() {
   return (
     <PageShell>
       <PageHero
-        eyebrow="Service 02"
         title="People Development"
         intro="Are your people equipped to perform at the level your business demands? We build the mindset, skill and confidence your leaders and teams need — today and next."
       />
