@@ -1,6 +1,5 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import heroTarget from "@/assets/hero-target.png";
 
 const slides = [
   {
@@ -35,7 +34,7 @@ export function HeroRotator() {
   }, []);
   return (
     <section id="home" className="relative overflow-hidden">
-      <div className="mx-auto max-w-7xl px-6 md:px-10 pt-16 pb-24 md:pt-24 md:pb-32 grid md:grid-cols-[1.15fr_1fr] gap-12 items-center">
+      <div className="mx-auto max-w-3xl px-6 md:px-10 pt-16 pb-24 md:pt-24 md:pb-32 text-center">
         <div className="relative overflow-hidden">
           <div
             className="flex transition-transform duration-700 ease-[cubic-bezier(0.65,0,0.35,1)]"
@@ -72,16 +71,6 @@ export function HeroRotator() {
               />
             ))}
           </div>
-        </div>
-        <div className="relative">
-          <div className="absolute -inset-8 bg-[var(--cyan-accent)]/5 rounded-full blur-3xl" aria-hidden />
-          <img
-            src={heroTarget}
-            alt="Dart hitting the bullseye — precision execution"
-            width={1024}
-            height={1024}
-            className="relative w-full max-w-lg mx-auto"
-          />
         </div>
       </div>
     </section>
