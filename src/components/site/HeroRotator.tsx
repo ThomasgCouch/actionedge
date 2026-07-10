@@ -1,6 +1,5 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import heroTarget from "@/assets/hero-target.png";
 
 const slides = [
   {
