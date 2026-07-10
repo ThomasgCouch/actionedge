@@ -9,8 +9,44 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as StrategicThinkingRouteImport } from './routes/strategic-thinking'
+import { Route as PeopleDevelopmentRouteImport } from './routes/people-development'
+import { Route as OrgDesignCultureRouteImport } from './routes/org-design-culture'
+import { Route as DiscRouteImport } from './routes/disc'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
+const StrategicThinkingRoute = StrategicThinkingRouteImport.update({
+  id: '/strategic-thinking',
+  path: '/strategic-thinking',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PeopleDevelopmentRoute = PeopleDevelopmentRouteImport.update({
+  id: '/people-development',
+  path: '/people-development',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OrgDesignCultureRoute = OrgDesignCultureRouteImport.update({
+  id: '/org-design-culture',
+  path: '/org-design-culture',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DiscRoute = DiscRouteImport.update({
+  id: '/disc',
+  path: '/disc',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +55,116 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/disc': typeof DiscRoute
+  '/org-design-culture': typeof OrgDesignCultureRoute
+  '/people-development': typeof PeopleDevelopmentRoute
+  '/strategic-thinking': typeof StrategicThinkingRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/disc': typeof DiscRoute
+  '/org-design-culture': typeof OrgDesignCultureRoute
+  '/people-development': typeof PeopleDevelopmentRoute
+  '/strategic-thinking': typeof StrategicThinkingRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/disc': typeof DiscRoute
+  '/org-design-culture': typeof OrgDesignCultureRoute
+  '/people-development': typeof PeopleDevelopmentRoute
+  '/strategic-thinking': typeof StrategicThinkingRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/disc'
+    | '/org-design-culture'
+    | '/people-development'
+    | '/strategic-thinking'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/disc'
+    | '/org-design-culture'
+    | '/people-development'
+    | '/strategic-thinking'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/disc'
+    | '/org-design-culture'
+    | '/people-development'
+    | '/strategic-thinking'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  ContactRoute: typeof ContactRoute
+  DiscRoute: typeof DiscRoute
+  OrgDesignCultureRoute: typeof OrgDesignCultureRoute
+  PeopleDevelopmentRoute: typeof PeopleDevelopmentRoute
+  StrategicThinkingRoute: typeof StrategicThinkingRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/strategic-thinking': {
+      id: '/strategic-thinking'
+      path: '/strategic-thinking'
+      fullPath: '/strategic-thinking'
+      preLoaderRoute: typeof StrategicThinkingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/people-development': {
+      id: '/people-development'
+      path: '/people-development'
+      fullPath: '/people-development'
+      preLoaderRoute: typeof PeopleDevelopmentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/org-design-culture': {
+      id: '/org-design-culture'
+      path: '/org-design-culture'
+      fullPath: '/org-design-culture'
+      preLoaderRoute: typeof OrgDesignCultureRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/disc': {
+      id: '/disc'
+      path: '/disc'
+      fullPath: '/disc'
+      preLoaderRoute: typeof DiscRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +177,12 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  ContactRoute: ContactRoute,
+  DiscRoute: DiscRoute,
+  OrgDesignCultureRoute: OrgDesignCultureRoute,
+  PeopleDevelopmentRoute: PeopleDevelopmentRoute,
+  StrategicThinkingRoute: StrategicThinkingRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
