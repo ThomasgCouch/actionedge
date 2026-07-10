@@ -37,14 +37,15 @@ export function Newsletter() {
   );
 }
 
+import logoAsset from "@/assets/actionedge-logo.jpeg.asset.json";
+
 export function Footer() {
   return (
     <footer className="border-t border-border">
       <div className="mx-auto max-w-7xl px-6 md:px-10 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-        <div className="flex items-center gap-2">
-          <span className="inline-block w-6 h-6 rounded-md bg-[var(--cyan-accent)]" />
-          <span className="font-display font-bold text-[var(--navy)]">ActionEDGE TT</span>
-        </div>
+        <Link to="/" className="flex items-center">
+          <img src={logoAsset.url} alt="ActionEDGE" className="h-12 w-auto object-contain" />
+        </Link>
         <p>© {new Date().getFullYear()} ActionEDGE TT. Strategy, People & Culture.</p>
       </div>
     </footer>
