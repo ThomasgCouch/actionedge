@@ -43,10 +43,10 @@ export function HeroRotator() {
           >
             {slides.map((s, idx) => (
               <div key={idx} className="w-full shrink-0 pr-4">
-                <p className="text-xs uppercase tracking-[0.25em] text-[var(--cyan-accent)] font-semibold mb-6">
+                <p className="text-[10px] md:text-xs uppercase tracking-[0.25em] text-[var(--cyan-accent)] font-semibold mb-4">
                   {s.eyebrow}
                 </p>
-                <h1 className="text-[clamp(2.75rem,6vw,5.25rem)] leading-[0.98] font-bold text-[var(--cyan-accent)]">
+                <h1 className="text-[clamp(1.85rem,4.2vw,3.5rem)] leading-[1.12] font-bold text-[var(--cyan-accent)]">
                   {s.headline[0]}
                   {s.headline[1] && (
                     <>
@@ -55,7 +55,7 @@ export function HeroRotator() {
                     </>
                   )}
                 </h1>
-                <div className="mt-10 flex flex-wrap gap-4">
+                <div className="mt-8 flex flex-wrap gap-4">
                   <Link to={s.cta.to} className="btn-pill-primary">{s.cta.label}</Link>
                   <Link to="/about" className="btn-pill">How we work</Link>
                 </div>
