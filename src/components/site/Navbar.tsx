@@ -15,7 +15,7 @@ const links = [
 export function Navbar() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="sticky top-0 z-50 backdrop-blur-md bg-background/85 border-b border-border/60">
+    <header className="sticky top-0 z-50 bg-background border-b border-border/60">
       <div className="mx-auto max-w-7xl px-6 md:px-10 h-24 flex items-center justify-between">
         <Link to="/" className="flex items-center">
           <img src={logoAsset.url} alt="ActionEDGE" className="h-16 md:h-20 w-auto object-contain" />
