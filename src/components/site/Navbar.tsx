@@ -20,14 +20,14 @@ export function Navbar() {
         <Link to="/" className="flex items-center">
           <img src={logoAsset.url} alt="ActionEDGE" className="h-16 md:h-20 w-auto object-contain" />
         </Link>
-        <nav className="hidden lg:flex items-center gap-7">
+        <nav className="hidden lg:flex items-center gap-1">
           {links.map((l) => (
             <Link
               key={l.to}
               to={l.to}
               activeOptions={{ exact: true }}
-              activeProps={{ className: "text-[var(--cyan-accent)]" }}
-              className="text-sm text-[var(--navy)]/80 hover:text-[var(--cyan-accent)] transition-colors"
+              inactiveProps={{ className: "px-3 py-1.5 text-sm text-[var(--navy)]/80 hover:text-[var(--cyan-accent)] transition-colors" }}
+              activeProps={{ className: "px-3 py-1.5 text-sm rounded-full bg-[var(--cyan-accent)]/10 text-[var(--cyan-accent)] font-semibold" }}
             >
               {l.label}
             </Link>
