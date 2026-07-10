@@ -26,8 +26,8 @@ export function Navbar() {
               key={l.to}
               to={l.to}
               activeOptions={{ exact: true }}
-              inactiveProps={{ className: "px-3 py-1.5 text-sm text-[var(--navy)]/80 hover:text-[var(--cyan-accent)] transition-colors" }}
-              activeProps={{ className: "px-3 py-1.5 text-sm rounded-full bg-[var(--cyan-accent)]/10 text-[var(--cyan-accent)] font-semibold" }}
+              inactiveProps={{ className: "px-2.5 py-1 text-xs text-[var(--navy)]/80 hover:text-[var(--cyan-accent)] transition-colors" }}
+              activeProps={{ className: "px-2.5 py-1 text-xs rounded-full bg-[var(--cyan-accent)]/10 text-[var(--cyan-accent)] font-semibold" }}
             >
               {l.label}
             </Link>
