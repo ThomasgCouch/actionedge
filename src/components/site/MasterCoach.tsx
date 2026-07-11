@@ -14,7 +14,7 @@ export function MasterCoach() {
           </div>
         </div>
         <div>
-          <p className="text-xs uppercase tracking-[0.25em] text-[var(--cyan-accent)] font-semibold mb-6">
+          <p className="text-sm uppercase tracking-[0.25em] text-[var(--cyan-accent)] font-semibold mb-6">
             Meet Our Master Coach
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-[var(--navy)] leading-tight">

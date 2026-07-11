@@ -4,7 +4,7 @@ export function ApproachIntro() {
   return (
     <section id="approach" className="border-y border-border bg-[var(--navy)] text-white">
       <div className="mx-auto max-w-7xl px-6 md:px-10 py-24 md:py-32">
-        <p className="text-xs uppercase tracking-[0.25em] text-[var(--cyan-accent)] font-semibold mb-6">
+        <p className="text-sm uppercase tracking-[0.25em] text-[var(--cyan-accent)] font-semibold mb-6">
           How We Deliver Results
         </p>
         <h2 className="text-4xl md:text-6xl font-bold max-w-4xl leading-tight">

@@ -141,7 +141,7 @@ export function HeroRotator() {
                 <div key={idx} className="w-full shrink-0 pr-4">
                   <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-center">
                     <div>
-                      <p className="text-[10px] md:text-xs uppercase tracking-[0.25em] text-[var(--cyan-accent)] font-semibold mb-4">
+                      <p className="text-xs md:text-sm uppercase tracking-[0.25em] text-[var(--cyan-accent)] font-semibold mb-4">
                         {s.eyebrow}
                       </p>
                       <h1 className="text-[clamp(1.85rem,4vw,3.25rem)] leading-[1.12] font-bold text-[var(--cyan-accent)]">
