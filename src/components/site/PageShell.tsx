@@ -53,7 +53,7 @@ export function PageHero({
     <section className="border-b border-border">
       <div className="mx-auto max-w-7xl px-6 md:px-10 py-20 md:py-28">
         {eyebrow && (
-          <p className="text-sm uppercase tracking-[0.25em] text-[var(--brand-blue)] font-semibold mb-6">
+          <p className="text-base uppercase tracking-[0.25em] text-[var(--brand-blue)] font-semibold mb-6">
             {eyebrow}
           </p>
         )}

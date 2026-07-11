@@ -27,7 +27,7 @@ export function ServicePillars() {
     <section id="services" className="mx-auto max-w-7xl px-6 md:px-10 py-24 md:py-32">
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
         <div>
-          <p className="text-xs uppercase tracking-[0.25em] text-[var(--cyan-accent)] font-semibold mb-4">
+          <p className="text-sm uppercase tracking-[0.25em] text-[var(--cyan-accent)] font-semibold mb-4">
             What We Do
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-[var(--navy)] max-w-2xl leading-tight">

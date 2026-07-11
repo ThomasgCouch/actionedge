@@ -9,7 +9,7 @@ export function Newsletter() {
         <div className="absolute -bottom-32 -left-16 w-96 h-96 rounded-full bg-[var(--cyan-accent)]/15 blur-3xl" aria-hidden />
         <div className="relative grid md:grid-cols-[1.3fr_1fr] gap-10 items-center">
           <div>
-            <p className="text-xs uppercase tracking-[0.25em] text-[var(--cyan-accent)] font-semibold mb-6">
+            <p className="text-sm uppercase tracking-[0.25em] text-[var(--cyan-accent)] font-semibold mb-6">
               Stay Informed. Stay Ahead.
             </p>
             <h2 className="text-4xl md:text-5xl font-bold leading-tight">

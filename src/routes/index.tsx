@@ -162,7 +162,7 @@ function Home() {
               />
             </div>
             <div>
-              <p className="text-sm uppercase tracking-[0.25em] text-[var(--brand-blue)] font-semibold">
+              <p className="text-base uppercase tracking-[0.25em] text-[var(--brand-blue)] font-semibold">
                 Dr. Indira Persad Couch
               </p>
               <h3 className="mt-3 text-3xl md:text-4xl font-bold text-[var(--brand-grey)] leading-tight">
