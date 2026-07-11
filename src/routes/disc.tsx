@@ -73,9 +73,9 @@ function DiscPage() {
   return (
     <PageShell>
       <PageHero
-        variant="green"
-        title="DISC Assessments"
-        subtitle="Understand people. Communicate better. Perform higher."
+        eyebrow="DISC Assessments"
+        title="Understand people. Communicate better. Perform higher."
+        intro="DISC assessments help leaders and teams understand behavioural styles, communicate better, and perform at a higher level."
       />
 
       {/* D-I-S-C letters */}

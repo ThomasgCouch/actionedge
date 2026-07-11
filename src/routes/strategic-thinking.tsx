@@ -51,9 +51,9 @@ function StrategyPage() {
   return (
     <PageShell>
       <PageHero
-        variant="green"
-        title="Strategic Thinking & Execution Planning"
-        subtitle="Turning Vision into Focused, Measurable Action"
+        eyebrow="Strategic Thinking & Execution Planning"
+        title="Turning Vision into Focused, Measurable Action"
+        intro="Many organizations don't struggle because they lack ideas — they struggle because strategy is unclear, priorities are misaligned, and execution is inconsistent."
       />
 
       {/* Intro + outcomes */}

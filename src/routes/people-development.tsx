@@ -52,9 +52,9 @@ function PeoplePage() {
   return (
     <PageShell>
       <PageHero
-        variant="green"
-        title="People Development"
-        subtitle="Developing People Who Drive Performance"
+        eyebrow="People Development"
+        title="Developing People Who Drive Performance"
+        intro="Strong organizations are built by strong people. At ActionEDGE, we help individuals, leaders, and teams strengthen the skills, mindset, communication, and behaviours needed to perform at a higher level."
       />
 
       {/* Intro */}

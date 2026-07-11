@@ -21,9 +21,8 @@ function EventsPage() {
   return (
     <PageShell>
       <PageHero
-        variant="green"
-        title="Upcoming Events"
-        subtitle="Transform the way you lead, communicate, and perform."
+        eyebrow="Upcoming Events"
+        title="Transform the way you lead, communicate, and perform."
         intro="Register for an upcoming event and take the next step in your professional journey."
       />
 
