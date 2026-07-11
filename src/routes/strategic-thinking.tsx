@@ -85,23 +85,30 @@ function StrategyPage() {
         </div>
       </section>
 
-      {/* Offers */}
+      {/* Offers — numbered editorial list */}
       <section className="bg-[var(--brand-beige)]/10">
         <div className="mx-auto max-w-7xl px-6 md:px-10 py-20 md:py-24">
-          <h2 className="text-3xl md:text-4xl font-bold text-[var(--brand-green)] text-center mb-14">
+          <h2 className="text-3xl md:text-4xl font-bold text-[var(--brand-green)] mb-14">
             Our Strategy & Execution Offers
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
-            {offers.map((o) => (
+          <div className="grid md:grid-cols-2 gap-x-14 gap-y-2">
+            {offers.map((o, i) => (
               <article
                 key={o.title}
-                className="rounded-2xl bg-white border border-[var(--brand-green)]/15 p-6 hover:border-[var(--brand-green)] hover:-translate-y-1 hover:shadow-lg transition-all"
+                className="group grid grid-cols-[auto_1fr] gap-6 items-start py-6 border-t border-[var(--brand-green)]/20 hover:bg-white/60 transition-colors rounded-lg px-2"
               >
-                <o.icon className="w-10 h-10 text-[var(--brand-green)]" strokeWidth={1.5} />
-                <h3 className="mt-4 text-base font-bold text-[var(--brand-green)] leading-tight">
-                  {o.title}
-                </h3>
-                <p className="mt-2 text-sm text-[var(--brand-grey)] leading-relaxed">{o.body}</p>
+                <span className="font-mono text-sm text-[var(--brand-blue)] pt-1 tabular-nums">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <div>
+                  <div className="flex items-center gap-3">
+                    <o.icon className="w-5 h-5 text-[var(--brand-green)]" strokeWidth={2} />
+                    <h3 className="text-lg font-bold text-[var(--brand-green)] leading-tight">
+                      {o.title}
+                    </h3>
+                  </div>
+                  <p className="mt-2 text-sm text-[var(--brand-grey)] leading-relaxed">{o.body}</p>
+                </div>
               </article>
             ))}
           </div>

@@ -93,23 +93,28 @@ function OrgPage() {
         </div>
       </section>
 
-      {/* Offers */}
+      {/* Offers — hover-reveal tiles */}
       <section className="bg-[var(--brand-beige)]/10">
         <div className="mx-auto max-w-7xl px-6 md:px-10 py-20 md:py-24">
           <h2 className="text-3xl md:text-4xl font-bold text-[var(--brand-green)] text-center mb-14">
             Our Organizational Design & Culture Transformation Offers
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[var(--brand-green)]/20 rounded-3xl overflow-hidden border border-[var(--brand-green)]/20">
             {offers.map((o) => (
               <article
                 key={o.title}
-                className="rounded-2xl bg-white border border-[var(--brand-green)]/15 p-6 hover:border-[var(--brand-green)] hover:-translate-y-1 hover:shadow-lg transition-all"
+                className="group relative bg-white p-8 hover:bg-[var(--brand-green)] transition-colors min-h-[220px] flex flex-col"
               >
-                <o.icon className="w-10 h-10 text-[var(--brand-green)]" strokeWidth={1.5} />
-                <h3 className="mt-4 text-base font-bold text-[var(--brand-green)] leading-tight">
+                <o.icon
+                  className="w-9 h-9 text-[var(--brand-green)] group-hover:text-white transition-colors"
+                  strokeWidth={1.5}
+                />
+                <h3 className="mt-6 text-lg font-bold text-[var(--brand-green)] group-hover:text-white leading-tight transition-colors">
                   {o.title}
                 </h3>
-                <p className="mt-2 text-sm text-[var(--brand-grey)] leading-relaxed">{o.body}</p>
+                <p className="mt-3 text-sm text-[var(--brand-grey)] group-hover:text-white/90 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {o.body}
+                </p>
               </article>
             ))}
           </div>

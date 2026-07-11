@@ -85,23 +85,30 @@ function PeoplePage() {
         </div>
       </section>
 
-      {/* Offers */}
+      {/* Offers — horizontal media rows */}
       <section className="bg-[var(--brand-beige)]/10">
         <div className="mx-auto max-w-7xl px-6 md:px-10 py-20 md:py-24">
           <h2 className="text-3xl md:text-4xl font-bold text-[var(--brand-green)] text-center mb-14">
             Our People Development Offers
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="max-w-5xl mx-auto space-y-3">
             {offers.map((o) => (
               <article
                 key={o.title}
-                className="rounded-2xl bg-white border border-[var(--brand-green)]/15 p-6 hover:border-[var(--brand-green)] hover:-translate-y-1 hover:shadow-lg transition-all"
+                className="group flex items-center gap-6 bg-white rounded-full pl-3 pr-8 py-3 border border-transparent hover:border-[var(--brand-green)]/30 hover:shadow-md transition-all"
               >
-                <o.icon className="w-10 h-10 text-[var(--brand-green)]" strokeWidth={1.5} />
-                <h3 className="mt-4 text-base font-bold text-[var(--brand-green)] leading-tight">
-                  {o.title}
-                </h3>
-                <p className="mt-2 text-sm text-[var(--brand-grey)] leading-relaxed">{o.body}</p>
+                <div className="shrink-0 w-14 h-14 rounded-full bg-[var(--brand-green)]/10 flex items-center justify-center group-hover:bg-[var(--brand-green)] transition-colors">
+                  <o.icon
+                    className="w-6 h-6 text-[var(--brand-green)] group-hover:text-white transition-colors"
+                    strokeWidth={1.75}
+                  />
+                </div>
+                <div className="flex-1 grid md:grid-cols-[240px_1fr] gap-4 items-center">
+                  <h3 className="text-base font-bold text-[var(--brand-green)] leading-tight">
+                    {o.title}
+                  </h3>
+                  <p className="text-sm text-[var(--brand-grey)] leading-relaxed">{o.body}</p>
+                </div>
               </article>
             ))}
           </div>
