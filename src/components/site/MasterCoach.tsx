@@ -9,7 +9,7 @@ export function MasterCoach() {
             <img src={growth} alt="Growth trajectory illustration" width={1024} height={1024} className="w-full max-w-sm" loading="lazy" />
           </div>
           <div className="absolute -bottom-6 -right-6 bg-[var(--cyan-accent)] text-white rounded-2xl px-6 py-4 shadow-xl">
-            <div className="text-3xl font-bold">20+</div>
+            <div className="text-3xl font-bold">30+</div>
             <div className="text-xs uppercase tracking-widest opacity-90">Years leading change</div>
           </div>
         </div>
