@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const slides = [
   {
@@ -115,7 +115,7 @@ function CultureAnim() {
   );
 }
 
-const visuals: Record<string, () => JSX.Element> = {
+const visuals: Record<string, () => React.ReactElement> = {
   strategy: StrategyAnim,
   people: PeopleAnim,
   culture: CultureAnim,
