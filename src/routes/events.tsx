@@ -31,19 +31,19 @@ function EventsPage() {
           {[1, 2, 3].map((i) => (
             <article
               key={i}
-              className="rounded-3xl border border-border bg-secondary p-8 flex flex-col min-h-[280px]"
+              className="rounded-3xl border border-[var(--brand-green)]/20 bg-white p-8 flex flex-col min-h-[280px] shadow-sm hover:shadow-md hover:border-[var(--brand-green)]/40 transition-all"
             >
-              <span className="inline-flex w-fit px-3 py-1 rounded-full bg-[var(--cyan-accent)]/10 text-[var(--cyan-accent)] text-xs font-semibold uppercase tracking-wider">
+              <span className="inline-flex w-fit px-3 py-1 rounded-full bg-[var(--brand-green)]/10 text-[var(--brand-green)] text-xs font-semibold uppercase tracking-wider">
                 Coming Soon
               </span>
-              <h3 className="mt-6 text-xl font-bold text-[var(--navy)]">
+              <h3 className="mt-6 text-xl font-bold text-[var(--brand-green)]">
                 Event Title Placeholder {i}
               </h3>
               <p className="mt-3 text-muted-foreground flex-1">
                 Details for this upcoming event will be posted here soon. Check back for dates,
                 location, and registration information.
               </p>
-              <div className="mt-6 pt-6 border-t border-border flex items-center justify-between text-sm text-muted-foreground">
+              <div className="mt-6 pt-6 border-t border-[var(--brand-green)]/10 flex items-center justify-between text-sm text-[var(--brand-green)]">
                 <span>TBD</span>
                 <span>Caribbean</span>
               </div>
