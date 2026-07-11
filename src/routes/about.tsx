@@ -47,10 +47,9 @@ function AboutPage() {
   return (
     <PageShell>
       <PageHero
-        variant="green"
         eyebrow="About ActionEDGE"
         title="Growth is intentional, not accidental."
-        subtitle="We partner with leaders across the Caribbean to align strategy, people, culture and execution."
+        intro="We partner with leaders across the Caribbean to align strategy, people, culture and execution."
       />
 
       {/* Commitment band */}

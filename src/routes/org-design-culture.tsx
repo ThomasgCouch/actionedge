@@ -61,9 +61,9 @@ function OrgPage() {
   return (
     <PageShell>
       <PageHero
-        variant="green"
-        title="Organizational Design & Culture Transformation"
-        subtitle="Building Organizations That Perform, Align, and Thrive"
+        eyebrow="Organizational Design & Culture Transformation"
+        title="Building Organizations That Perform, Align, and Thrive"
+        intro="As organizations grow and evolve, success depends not only on strategy, but on having the right structure, culture, behaviours, and systems to support sustainable performance."
       />
 
       {/* Intro */}

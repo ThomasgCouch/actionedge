@@ -62,7 +62,7 @@ const faqs = [
 function ContactPage() {
   return (
     <PageShell>
-      <PageHero variant="green" title="Contact Us" subtitle="Let's talk about your next chapter of growth." />
+      <PageHero eyebrow="Contact Us" title="Let's talk about your next chapter of growth." intro="Reach the ActionEDGE team for meetings, workshops, DISC assessments, and general inquiries." />
 
       {/* Contact directory */}
       <section className="bg-[var(--brand-beige)]/10">
