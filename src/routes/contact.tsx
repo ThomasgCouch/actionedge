@@ -100,7 +100,7 @@ function ContactPage() {
               rel="noreferrer"
               className="rounded-2xl bg-[var(--brand-green)] text-white p-8 hover:scale-[1.02] transition-transform"
             >
-              <p className="text-xs uppercase tracking-[0.25em] font-semibold text-white/80">
+              <p className="text-sm uppercase tracking-[0.25em] font-semibold text-white/80">
                 Book a Discovery Call
               </p>
               <h3 className="mt-3 text-2xl font-bold">30 minutes. Zero pressure. Real clarity. →</h3>
@@ -111,7 +111,7 @@ function ContactPage() {
               rel="noreferrer"
               className="rounded-2xl bg-[var(--brand-grey)] text-white p-8 hover:scale-[1.02] transition-transform"
             >
-              <p className="text-xs uppercase tracking-[0.25em] font-semibold text-white/80">
+              <p className="text-sm uppercase tracking-[0.25em] font-semibold text-white/80">
                 Join Our Mailing List
               </p>
               <h3 className="mt-3 text-2xl font-bold">Workshops, insights & practical tips. →</h3>
