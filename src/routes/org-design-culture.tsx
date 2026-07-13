@@ -54,7 +54,7 @@ const offers = [
   { icon: UserCheck, title: "Workplace Behaviour & Accountability", body: "Develop environments that encourage ownership, professionalism, and consistent performance." },
   { icon: Sparkles, title: "Employee Experience & Performance Culture", body: "Improve workplace experience while strengthening productivity, engagement, and retention." },
   { icon: Rocket, title: "High-Performance Team Development", body: "Equip teams with the mindset, structure, and behaviours needed to perform at a higher level." },
-  { icon: Star, title: "Team Alignment & Engagement", body: "Strengthen communication, collaboration, and alignment across teams and departments." },
+  { icon: Star, title: "Workplace Culture & Values Alignment", body: "Align everyday behaviours with the values, standards, and identity your organization stands for." },
 ];
 
 function OrgPage() {
