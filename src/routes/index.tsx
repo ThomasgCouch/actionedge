@@ -121,13 +121,13 @@ function Home() {
             </p>
           </div>
 
-          <div className="mt-14 grid md:grid-cols-3 gap-6">
+          <div className="mt-14 grid md:grid-cols-3 gap-6 items-stretch">
             {pillars.map((p) => (
               <article
                 key={p.title}
-                className="rounded-3xl bg-[var(--brand-green)] p-8 flex flex-col hover:scale-[1.02] transition-transform"
+                className="rounded-3xl bg-[var(--brand-green)] p-8 flex flex-col h-full hover:scale-[1.02] transition-transform"
               >
-                <h3 className="text-xl font-bold text-center pb-4 border-b border-white/25 mb-5">
+                <h3 className="text-xl font-bold text-center pb-4 border-b border-white/25 mb-5 min-h-[3.5rem] flex items-center justify-center">
                   {p.title}
                 </h3>
                 <ul className="space-y-2.5 text-sm text-white/95 flex-1">
@@ -140,7 +140,7 @@ function Home() {
                 </ul>
                 <Link
                   to={p.to}
-                  className="mt-6 inline-flex self-start px-5 py-2 rounded-full bg-white text-[var(--brand-green)] font-semibold text-sm hover:bg-white/90 transition-colors"
+                  className="mt-auto inline-flex self-start px-5 py-2 rounded-full bg-white text-[var(--brand-green)] font-semibold text-sm hover:bg-white/90 transition-colors"
                 >
                   Explore More →
                 </Link>
