@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell, PageHero } from "@/components/site/PageShell";
+import { AnimatedPeopleGrowth } from "@/components/site/AnimatedAccents";
 import {
   Trophy,
   Briefcase,
@@ -9,7 +10,6 @@ import {
   MessageSquare,
   Sparkles,
   HeartHandshake,
-  ArrowUpRight,
 } from "lucide-react";
 
 export const Route = createFileRoute("/people-development")({

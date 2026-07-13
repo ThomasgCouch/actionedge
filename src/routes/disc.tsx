@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell, PageHero } from "@/components/site/PageShell";
+import { AnimatedDisc } from "@/components/site/AnimatedAccents";
 
 export const Route = createFileRoute("/disc")({
   head: () => ({

@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell, PageHero } from "@/components/site/PageShell";
+import { AnimatedMessage } from "@/components/site/AnimatedAccents";
 import { Mail, Phone } from "lucide-react";
 import { useState } from "react";
 

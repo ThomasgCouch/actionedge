@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell, PageHero } from "@/components/site/PageShell";
+import { AnimatedLightbulb } from "@/components/site/AnimatedAccents";
 import {
   ClipboardList,
   Cog,
@@ -9,7 +10,6 @@ import {
   CalendarCheck,
   Target,
   Briefcase,
-  Lightbulb,
 } from "lucide-react";
 
 export const Route = createFileRoute("/strategic-thinking")({

@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell, PageHero } from "@/components/site/PageShell";
+import { AnimatedCalendar } from "@/components/site/AnimatedAccents";
 import { events } from "@/data/events";
 
 export const Route = createFileRoute("/events")({

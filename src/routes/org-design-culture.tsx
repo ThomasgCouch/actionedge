@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell, PageHero } from "@/components/site/PageShell";
+import { AnimatedNetwork } from "@/components/site/AnimatedAccents";
 import {
   Network,
   Globe2,
@@ -10,7 +11,6 @@ import {
   UserCheck,
   Rocket,
   Star,
-  Settings2,
 } from "lucide-react";
 
 export const Route = createFileRoute("/org-design-culture")({
