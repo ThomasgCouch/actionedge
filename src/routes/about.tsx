@@ -45,11 +45,11 @@ const stats = [
 
 function AboutHeroAnimation() {
   return (
-    <div className="w-full h-64 md:h-80 overflow-hidden relative">
+    <div className="w-full aspect-square overflow-hidden relative">
       <svg
         className="absolute inset-0 w-full h-full"
-        viewBox="0 0 800 320"
-        preserveAspectRatio="xMidYMid slice"
+        viewBox="0 0 400 400"
+        preserveAspectRatio="xMidYMid meet"
         xmlns="http://www.w3.org/2000/svg"
       >
         <defs>
@@ -59,12 +59,15 @@ function AboutHeroAnimation() {
           </linearGradient>
         </defs>
 
+        {/* Soft background glow */}
+        <rect x="20" y="20" width="360" height="360" rx="24" fill="var(--brand-blue)" fillOpacity="0.06" />
+
         {/* Ground / horizon line */}
         <line
           x1="0"
-          y1="300"
-          x2="800"
-          y2="300"
+          y1="360"
+          x2="400"
+          y2="360"
           stroke="var(--brand-beige)"
           strokeWidth="2"
           strokeDasharray="8 8"
@@ -73,18 +76,18 @@ function AboutHeroAnimation() {
 
         {/* Growing stem */}
         <path
-          d="M400,300 Q400,240 400,180"
+          d="M200,360 Q200,280 200,200"
           fill="none"
           stroke="url(#stemGrad)"
           strokeWidth="6"
           strokeLinecap="round"
           className="about-stem"
-          style={{ strokeDasharray: 130, strokeDashoffset: 130 }}
+          style={{ strokeDasharray: 170, strokeDashoffset: 170 }}
         />
 
         {/* Branches */}
         <path
-          d="M400,240 Q360,220 340,190"
+          d="M200,280 Q160,250 140,220"
           fill="none"
           stroke="var(--brand-green)"
           strokeWidth="4"
@@ -93,7 +96,7 @@ function AboutHeroAnimation() {
           style={{ strokeDasharray: 80, strokeDashoffset: 80 }}
         />
         <path
-          d="M400,210 Q440,190 460,160"
+          d="M200,250 Q240,220 260,190"
           fill="none"
           stroke="var(--brand-blue)"
           strokeWidth="4"
@@ -103,25 +106,25 @@ function AboutHeroAnimation() {
         />
 
         {/* Leaves */}
-        <g className="about-leaf" style={{ opacity: 0, transformOrigin: "340px 190px" }}>
-          <ellipse cx="340" cy="190" rx="20" ry="10" fill="var(--brand-green)" transform="rotate(-30 340 190)" />
+        <g className="about-leaf" style={{ opacity: 0, transformOrigin: "140px 220px" }}>
+          <ellipse cx="140" cy="220" rx="20" ry="10" fill="var(--brand-green)" transform="rotate(-30 140 220)" />
         </g>
-        <g className="about-leaf" style={{ opacity: 0, transformOrigin: "460px 160px" }}>
-          <ellipse cx="460" cy="160" rx="20" ry="10" fill="var(--brand-blue)" transform="rotate(30 460 160)" />
+        <g className="about-leaf" style={{ opacity: 0, transformOrigin: "260px 190px" }}>
+          <ellipse cx="260" cy="190" rx="20" ry="10" fill="var(--brand-blue)" transform="rotate(30 260 190)" />
         </g>
-        <g className="about-leaf" style={{ opacity: 0, transformOrigin: "400px 150px" }}>
-          <ellipse cx="400" cy="150" rx="24" ry="12" fill="var(--brand-green)" transform="rotate(0 400 150)" />
+        <g className="about-leaf" style={{ opacity: 0, transformOrigin: "200px 170px" }}>
+          <ellipse cx="200" cy="170" rx="24" ry="12" fill="var(--brand-green)" transform="rotate(0 200 170)" />
         </g>
 
         {/* Orbiting connection nodes */}
-        <circle cx="260" cy="240" r="5" fill="var(--brand-grey)" className="about-node" />
-        <circle cx="540" cy="200" r="5" fill="var(--brand-grey)" className="about-node" />
-        <circle cx="620" cy="260" r="5" fill="var(--brand-beige)" className="about-node" />
-        <circle cx="180" cy="200" r="5" fill="var(--brand-beige)" className="about-node" />
+        <circle cx="80" cy="300" r="5" fill="var(--brand-grey)" className="about-node" />
+        <circle cx="320" cy="240" r="5" fill="var(--brand-grey)" className="about-node" />
+        <circle cx="80" cy="180" r="5" fill="var(--brand-beige)" className="about-node" />
+        <circle cx="320" cy="160" r="5" fill="var(--brand-beige)" className="about-node" />
 
         {/* Connecting pulses to the stem */}
         <path
-          d="M260,240 Q330,230 400,240"
+          d="M80,300 Q140,290 200,280"
           fill="none"
           stroke="var(--brand-grey)"
           strokeWidth="2"
@@ -129,7 +132,7 @@ function AboutHeroAnimation() {
           className="about-pulse"
         />
         <path
-          d="M540,200 Q470,205 400,210"
+          d="M320,240 Q260,245 200,250"
           fill="none"
           stroke="var(--brand-grey)"
           strokeWidth="2"
@@ -137,7 +140,7 @@ function AboutHeroAnimation() {
           className="about-pulse"
         />
         <path
-          d="M180,200 Q290,210 400,220"
+          d="M80,180 Q140,185 200,200"
           fill="none"
           stroke="var(--brand-beige)"
           strokeWidth="2"
@@ -145,7 +148,7 @@ function AboutHeroAnimation() {
           className="about-pulse"
         />
         <path
-          d="M620,260 Q510,245 400,250"
+          d="M320,160 Q260,180 200,220"
           fill="none"
           stroke="var(--brand-beige)"
           strokeWidth="2"
@@ -156,7 +159,7 @@ function AboutHeroAnimation() {
 
       <style>{`
         @keyframes aboutGrowStem {
-          0% { stroke-dashoffset: 130; }
+          0% { stroke-dashoffset: 170; }
           40% { stroke-dashoffset: 0; }
           100% { stroke-dashoffset: 0; }
         }
