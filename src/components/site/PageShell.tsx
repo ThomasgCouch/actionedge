@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import type { ReactNode, ReactNode as ReactNodeType } from "react";
 import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Newsletter";
 
