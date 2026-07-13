@@ -27,7 +27,7 @@ export function PageHero({
 }) {
   if (variant === "green") {
     return (
-      <section className="px-4 md:px-8 pt-8">
+      <section className="px-6 md:px-10 pt-8">
         <div className="mx-auto max-w-7xl rounded-[2.5rem] bg-[var(--brand-green)] text-white px-8 md:px-16 py-16 md:py-20 text-center">
           {eyebrow && (
             <p className="text-sm uppercase tracking-[0.3em] text-white/80 font-semibold mb-4">

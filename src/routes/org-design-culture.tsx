@@ -124,7 +124,7 @@ function OrgPage() {
       </section>
 
       {/* CTA */}
-      <section className="mx-auto max-w-4xl px-6 md:px-10 py-20 md:py-24 text-center">
+      <section className="mx-auto max-w-7xl px-6 md:px-10 py-20 md:py-24 text-center">
         <h2 className="text-3xl md:text-5xl font-bold text-[var(--brand-grey)]">
           Strengthen Your Organization from Within
         </h2>

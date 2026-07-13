@@ -177,7 +177,7 @@ function DiscPage() {
 
       {/* DISC products */}
       <section className="bg-[var(--brand-beige)]/10">
-        <div className="mx-auto max-w-6xl px-6 md:px-10 py-20 md:py-24 space-y-6">
+        <div className="mx-auto max-w-7xl px-6 md:px-10 py-20 md:py-24 space-y-6">
           {products.map((p) => (
             <article
               key={p.name}
@@ -193,7 +193,7 @@ function DiscPage() {
       </section>
 
       {/* Closing */}
-      <section className="mx-auto max-w-4xl px-6 md:px-10 py-20 md:py-24 text-center">
+      <section className="mx-auto max-w-7xl px-6 md:px-10 py-20 md:py-24 text-center">
         <div className="flex justify-center mb-8">
           <AnimatedDisc />
         </div>
