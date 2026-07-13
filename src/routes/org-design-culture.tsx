@@ -54,7 +54,7 @@ const offers = [
   { icon: UserCheck, title: "Workplace Behaviour & Accountability", body: "Develop environments that encourage ownership, professionalism, and consistent performance." },
   { icon: Sparkles, title: "Employee Experience & Performance Culture", body: "Improve workplace experience while strengthening productivity, engagement, and retention." },
   { icon: Rocket, title: "High-Performance Team Development", body: "Equip teams with the mindset, structure, and behaviours needed to perform at a higher level." },
-  { icon: Star, title: "Team Alignment & Engagement", body: "Strengthen communication, collaboration, and alignment across teams and departments." },
+  { icon: Star, title: "Workplace Culture & Values Alignment", body: "Align everyday behaviours with the values, standards, and identity your organization stands for." },
 ];
 
 function OrgPage() {
@@ -69,11 +69,10 @@ function OrgPage() {
       {/* Intro */}
       <section className="mx-auto max-w-7xl px-6 md:px-10 py-16 md:py-20">
         <p className="text-lg text-[var(--brand-grey)] leading-relaxed max-w-5xl">
-          As organizations grow and evolve, success depends not only on strategy, but on having the
-          right structure, culture, behaviours, and systems to support sustainable performance.
           Align your leadership, people, and operations to build a stronger culture, improve
           collaboration, and create more effective ways of working.
         </p>
+
 
         <div className="mt-14 grid md:grid-cols-[auto_1fr] gap-8 md:gap-12 items-center">
           <div className="mx-auto">
