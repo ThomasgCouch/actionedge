@@ -61,7 +61,7 @@ function PeoplePage() {
       <section className="mx-auto max-w-7xl px-6 md:px-10 py-16 md:py-20">
         <div className="grid md:grid-cols-[auto_1fr] gap-8 md:gap-12 items-center">
           <div className="mx-auto">
-            <ArrowUpRight className="w-32 h-32 text-[var(--brand-green)]" strokeWidth={1.2} />
+            <AnimatedPeopleGrowth />
           </div>
           <ul className="grid sm:grid-cols-2 gap-3">
             {outcomes.map((o) => (

@@ -69,7 +69,7 @@ function StrategyPage() {
 
         <div className="mt-14 grid md:grid-cols-[auto_1fr] gap-8 md:gap-12 items-center">
           <div className="mx-auto">
-            <Lightbulb className="w-32 h-32 text-[var(--brand-green)]" strokeWidth={1.2} />
+            <AnimatedLightbulb />
           </div>
           <ul className="grid sm:grid-cols-2 gap-3">
             {outcomes.map((o) => (
