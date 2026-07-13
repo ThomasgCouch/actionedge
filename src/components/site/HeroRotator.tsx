@@ -129,7 +129,7 @@ export function HeroRotator() {
   }, []);
   return (
     <section id="home" className="relative overflow-hidden">
-      <div className="mx-auto max-w-7xl px-6 md:px-10 pt-16 pb-20 md:pt-24 md:pb-28">
+      <div className="mx-auto max-w-7xl px-6 md:px-10 pt-16 pb-12 md:pt-24 md:pb-16">
         <div className="relative overflow-hidden">
           <div
             className="flex transition-transform duration-700 ease-[cubic-bezier(0.65,0,0.35,1)]"
