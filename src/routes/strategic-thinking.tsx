@@ -85,7 +85,7 @@ function StrategyPage() {
         </div>
       </section>
 
-      {/* Offers | numbered editorial list */}
+      {/* Offers */}
       <section className="bg-[var(--brand-beige)]/10">
         <div className="mx-auto max-w-7xl px-6 md:px-10 py-20 md:py-24">
           <h2 className="text-3xl md:text-4xl font-bold text-[var(--brand-green)] mb-14">
