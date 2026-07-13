@@ -85,7 +85,7 @@ function Home() {
         <h2 className="text-3xl md:text-4xl font-bold text-[var(--brand-green)]">
           How We Deliver Results
         </h2>
-        <div className="mt-8 space-y-5 text-lg text-[var(--brand-grey)] leading-relaxed">
+        <div className="mt-8 space-y-5 text-lg text-[var(--brand-grey)] leading-relaxed text-justify">
           <p>
             At ActionEDGE, our approach is grounded in innovation, resilience, commitment,
             abundance, agility and fun, bringing together world-class methodologies, behavioural
