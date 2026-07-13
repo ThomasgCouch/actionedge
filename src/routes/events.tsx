@@ -6,13 +6,13 @@ import { events } from "@/data/events";
 export const Route = createFileRoute("/events")({
   head: () => ({
     meta: [
-      { title: "Events — ActionEDGE" },
+      { title: "Events | ActionEDGE" },
       {
         name: "description",
         content:
           "Join ActionEDGE for workshops, executive roundtables, and leadership intensives across the Caribbean.",
       },
-      { property: "og:title", content: "Events — ActionEDGE" },
+      { property: "og:title", content: "Events | ActionEDGE" },
       { property: "og:description", content: "Upcoming workshops, roundtables and leadership experiences." },
     ],
   }),

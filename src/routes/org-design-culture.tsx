@@ -16,7 +16,7 @@ import {
 export const Route = createFileRoute("/org-design-culture")({
   head: () => ({
     meta: [
-      { title: "Organizational Design & Culture Transformation — ActionEDGE" },
+      { title: "Organizational Design & Culture Transformation | ActionEDGE" },
       {
         name: "description",
         content:
@@ -24,11 +24,11 @@ export const Route = createFileRoute("/org-design-culture")({
       },
       {
         property: "og:title",
-        content: "Organizational Design & Culture Transformation — ActionEDGE",
+        content: "Organizational Design & Culture Transformation | ActionEDGE",
       },
       {
         property: "og:description",
-        content: "Structure, systems and culture — realigned to amplify performance.",
+        content: "Structure, systems and culture, realigned to amplify performance.",
       },
     ],
   }),
@@ -92,7 +92,7 @@ function OrgPage() {
         </div>
       </section>
 
-      {/* Offers — hover-reveal tiles */}
+      {/* Offers */}
       <section className="bg-[var(--brand-beige)]/10">
         <div className="mx-auto max-w-7xl px-6 md:px-10 py-20 md:py-24">
           <h2 className="text-3xl md:text-4xl font-bold text-[var(--brand-green)] text-center mb-14">
