@@ -29,6 +29,9 @@ function EventsPage() {
       />
 
       <section className="mx-auto max-w-7xl px-6 md:px-10 py-20 md:py-24">
+        <div className="flex flex-col items-center mb-12">
+          <AnimatedCalendar />
+        </div>
         {events.length === 0 ? (
           <div className="rounded-3xl border border-[var(--brand-green)]/20 bg-white p-10 md:p-14 text-center">
             <h2 className="text-2xl md:text-3xl font-bold text-[var(--brand-green)]">
