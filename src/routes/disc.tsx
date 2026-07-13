@@ -75,7 +75,12 @@ function DiscPage() {
     <PageShell>
       <PageHero
         eyebrow="DISC Assessments"
-        title="Understand people. Communicate better. Perform higher."
+        title={
+          <>
+            Understand people. Communicate better.{" "}
+            <span className="whitespace-nowrap">Perform higher.</span>
+          </>
+        }
         intro="DISC assessments help leaders and teams understand behavioural styles, communicate better, and perform at a higher level."
       />
 

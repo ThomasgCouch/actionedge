@@ -20,7 +20,7 @@ export function PageHero({
   variant = "light",
 }: {
   eyebrow?: string;
-  title: string;
+  title: ReactNode;
   intro?: string;
   subtitle?: string;
   variant?: "light" | "green";
