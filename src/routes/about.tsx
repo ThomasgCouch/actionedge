@@ -249,21 +249,24 @@ function AboutPage() {
             Our Values Define Our Culture
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {valueTiles.map((v) => (
-              <article
-                key={v.name}
-                className={`group relative rounded-[2rem] p-8 min-h-[220px] flex flex-col justify-center text-center overflow-hidden text-white transition-all duration-500 hover:scale-[1.03] hover:shadow-2xl ${
-                  v.tone === "green" ? "bg-[var(--brand-green)]" : "bg-[var(--brand-grey)]"
-                }`}
-              >
-                <h3 className="text-2xl font-bold transition-transform duration-500 group-hover:-translate-y-2">
-                  {v.name}
-                </h3>
-                <p className="mt-3 text-sm text-white/95 leading-relaxed opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-40 transition-all duration-500 ease-out">
-                  {v.body}
-                </p>
-              </article>
-            ))}
+          {valueTiles.map((v) => (
+            <article
+              key={v.name}
+              className={`group relative rounded-[2rem] p-8 min-h-[220px] flex flex-col justify-center text-center overflow-hidden text-white transition-all duration-500 hover:scale-[1.03] hover:shadow-2xl ${
+                v.tone === "green" ? "bg-[var(--brand-green)]" : "bg-[var(--brand-grey)]"
+              }`}
+            >
+              <h3 className="text-2xl font-bold transition-transform duration-500 group-hover:-translate-y-2">
+                {v.name}
+              </h3>
+              <p className="mt-2 text-xs italic text-white/70 opacity-100 group-hover:opacity-0 group-hover:max-h-0 transition-all duration-300 ease-out">
+                Hover to read more
+              </p>
+              <p className="mt-3 text-sm text-white/95 leading-relaxed opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-40 transition-all duration-500 ease-out">
+                {v.body}
+              </p>
+            </article>
+          ))}
           </div>
         </div>
       </section>
@@ -285,6 +288,9 @@ function AboutPage() {
               <h3 className="mt-3 text-lg font-bold text-[var(--brand-green)] leading-tight">
                 {r.title}
               </h3>
+              <p className="mt-2 text-xs italic text-[var(--brand-grey)]/60 opacity-100 group-hover:opacity-0 group-hover:max-h-0 group-hover:translate-y-1 transition-all duration-300 ease-out">
+                Hover to read more
+              </p>
               <p className="mt-3 text-sm text-[var(--brand-grey)] leading-relaxed opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out">
                 {r.body}
               </p>
