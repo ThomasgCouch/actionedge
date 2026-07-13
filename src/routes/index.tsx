@@ -45,10 +45,10 @@ const pillars = [
     to: "/people-development" as const,
     items: [
       "Leadership Coaching & Performance",
-      "Business Coaching",
+      "Group Business, Executive & Team Coaching",
       "Sales Training & Development",
       "Customized Training Solutions",
-      "Executive & Team Coaching",
+      "Hiring and Psychometric Tools",
       "Communication & Team Effectiveness",
       "Professional & Career Development",
     ],
