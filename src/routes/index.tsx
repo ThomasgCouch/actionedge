@@ -115,7 +115,7 @@ function Home() {
                 Across Individuals, Teams, and Organizations
               </h2>
             </div>
-            <p className="mt-6 italic text-white/85">
+            <p className="mt-6 italic text-lg text-white/85">
               Every solution is designed using proven instructional design methodologies,
               behavioural science, and best-practice learning approaches to ensure measurable impact.
             </p>
