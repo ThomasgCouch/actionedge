@@ -83,7 +83,7 @@ function PeoplePage() {
           <h2 className="text-3xl md:text-4xl font-bold text-[var(--brand-green)] text-center mb-14">
             Our People Development Offers
           </h2>
-          <div className="max-w-5xl mx-auto space-y-3">
+          <div className="space-y-3">
             {offers.map((o) => (
               <article
                 key={o.title}
@@ -108,7 +108,7 @@ function PeoplePage() {
       </section>
 
       {/* CTA */}
-      <section className="mx-auto max-w-4xl px-6 md:px-10 py-20 md:py-24 text-center">
+      <section className="mx-auto max-w-7xl px-6 md:px-10 py-20 md:py-24 text-center">
         <h2 className="text-3xl md:text-5xl font-bold text-[var(--brand-grey)]">
           Invest in Your Greatest Asset, Your People
         </h2>

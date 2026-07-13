@@ -67,7 +67,7 @@ function ContactPage() {
 
       {/* Contact directory */}
       <section className="bg-[var(--brand-beige)]/10">
-        <div className="mx-auto max-w-6xl px-6 md:px-10 py-20 md:py-24">
+        <div className="mx-auto max-w-7xl px-6 md:px-10 py-20 md:py-24">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 mb-12">
             <div>
               <p className="text-sm uppercase tracking-[0.25em] text-[var(--brand-blue)] font-semibold mb-3">Get in Touch</p>
@@ -131,7 +131,7 @@ function ContactPage() {
       </section>
 
       {/* FAQs */}
-      <section className="mx-auto max-w-4xl px-6 md:px-10 py-20 md:py-24">
+      <section className="mx-auto max-w-7xl px-6 md:px-10 py-20 md:py-24">
         <h2 className="text-3xl md:text-5xl font-bold text-[var(--brand-green)] text-center mb-12">
           FAQs
         </h2>
