@@ -53,19 +53,19 @@ function StrategyPage() {
       <PageHero
         eyebrow="Strategic Thinking & Execution Planning"
         title="Turning Vision into Focused, Measurable Action"
-        intro="Many organizations don't struggle because they lack ideas — they struggle because strategy is unclear, priorities are misaligned, and execution is inconsistent."
+        intro="Many organizations don't struggle because they lack ideas. They struggle because strategy is unclear, priorities are misaligned, and execution is inconsistent."
       />
 
       {/* Intro + outcomes */}
       <section className="mx-auto max-w-7xl px-6 md:px-10 py-16 md:py-20">
         <p className="text-lg text-[var(--brand-grey)] leading-relaxed max-w-5xl">
-          Many organizations don't struggle because they lack ideas — they struggle because
-          strategy is unclear, priorities are misaligned, and execution is inconsistent. At
-          ActionEDGE, we help leaders bridge the gap between vision and results by creating focused
-          strategies backed by practical execution. Whether you're refining your direction, aligning
-          your leadership team, strengthening execution, or preparing for the next stage of growth,
-          we help transform ideas into focused, measurable action.
+          At ActionEDGE, we help leaders bridge the gap between vision and results by creating
+          focused strategies backed by practical execution. Whether you're refining your direction,
+          aligning your leadership team, strengthening execution, or preparing for the next stage
+          of growth, we help transform ideas into focused, measurable action.
         </p>
+
+
 
         <div className="mt-14 grid md:grid-cols-[auto_1fr] gap-8 md:gap-12 items-center">
           <div className="mx-auto">
