@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell, PageHero } from "@/components/site/PageShell";
+import { AnimatedNetwork } from "@/components/site/AnimatedAccents";
 import {
   Network,
   Globe2,
@@ -10,7 +11,6 @@ import {
   UserCheck,
   Rocket,
   Star,
-  Settings2,
 } from "lucide-react";
 
 export const Route = createFileRoute("/org-design-culture")({
@@ -77,7 +77,7 @@ function OrgPage() {
 
         <div className="mt-14 grid md:grid-cols-[auto_1fr] gap-8 md:gap-12 items-center">
           <div className="mx-auto">
-            <Settings2 className="w-32 h-32 text-[var(--brand-green)]" strokeWidth={1.2} />
+            <AnimatedNetwork />
           </div>
           <ul className="grid sm:grid-cols-2 gap-3">
             {outcomes.map((o) => (

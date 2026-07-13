@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell } from "@/components/site/PageShell";
 import { HeroRotator } from "@/components/site/HeroRotator";
 import { Newsletter } from "@/components/site/Newsletter";
+import { AnimatedRisingChart } from "@/components/site/AnimatedAccents";
 import coachAsset from "@/assets/coach-indira.jpg.asset.json";
 import ctaImg from "@/assets/home-cta.jpg";
 import { Globe2, Trophy, ShieldCheck, Target } from "lucide-react";
@@ -97,6 +98,9 @@ function Home() {
             development, people, and execution — and when that alignment happens, organizations
             don't just grow, they achieve sustainable, exponential growth.
           </p>
+        </div>
+        <div className="mt-10 flex justify-center">
+          <AnimatedRisingChart />
         </div>
       </section>
 

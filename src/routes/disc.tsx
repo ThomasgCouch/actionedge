@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell, PageHero } from "@/components/site/PageShell";
+import { AnimatedDisc } from "@/components/site/AnimatedAccents";
 
 export const Route = createFileRoute("/disc")({
   head: () => ({
@@ -188,6 +189,9 @@ function DiscPage() {
 
       {/* Closing */}
       <section className="mx-auto max-w-4xl px-6 md:px-10 py-20 md:py-24 text-center">
+        <div className="flex justify-center mb-8">
+          <AnimatedDisc />
+        </div>
         <h2 className="text-3xl md:text-4xl font-bold text-[var(--brand-green)]">
           The right insight changes everything.
         </h2>
