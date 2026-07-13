@@ -59,15 +59,7 @@ function PeoplePage() {
 
       {/* Intro */}
       <section className="mx-auto max-w-7xl px-6 md:px-10 py-16 md:py-20">
-        <p className="text-lg text-[var(--brand-grey)] leading-relaxed max-w-5xl">
-          Strong organizations are built by strong people. At ActionEDGE, we help individuals,
-          leaders, and teams strengthen the skills, mindset, communication, and behaviours needed
-          to perform at a higher level. Our approach combines instructional design, behavioural
-          insight, and real-world application to ensure development translates into lasting
-          performance and impact.
-        </p>
-
-        <div className="mt-14 grid md:grid-cols-[auto_1fr] gap-8 md:gap-12 items-center">
+        <div className="grid md:grid-cols-[auto_1fr] gap-8 md:gap-12 items-center">
           <div className="mx-auto">
             <ArrowUpRight className="w-32 h-32 text-[var(--brand-green)]" strokeWidth={1.2} />
           </div>
