@@ -288,6 +288,9 @@ function AboutPage() {
               <h3 className="mt-3 text-lg font-bold text-[var(--brand-green)] leading-tight">
                 {r.title}
               </h3>
+              <p className="mt-2 text-xs italic text-[var(--brand-grey)]/60 opacity-100 group-hover:opacity-0 group-hover:max-h-0 group-hover:translate-y-1 transition-all duration-300 ease-out">
+                Hover to read more
+              </p>
               <p className="mt-3 text-sm text-[var(--brand-grey)] leading-relaxed opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out">
                 {r.body}
               </p>
