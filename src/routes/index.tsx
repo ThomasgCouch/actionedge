@@ -172,7 +172,7 @@ function Home() {
               <h3 className="mt-3 text-3xl md:text-4xl font-bold text-[var(--brand-grey)] leading-tight">
                 Recognized for <span className="text-[var(--brand-green)]">Impact That Matters</span>
               </h3>
-              <p className="mt-5 text-lg text-[var(--brand-grey)] leading-relaxed">
+              <p className="mt-5 text-lg text-[var(--brand-grey)] leading-relaxed text-justify">
                 Across the Caribbean and internationally, her work has been acknowledged for
                 excellence in leadership, coaching, and business transformation.
               </p>
