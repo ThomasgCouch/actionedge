@@ -130,7 +130,7 @@ function Home() {
                 <h3 className="text-xl font-bold text-center pb-4 border-b border-white/25 mb-5 min-h-[3.5rem] flex items-center justify-center">
                   {p.title}
                 </h3>
-                <ul className="space-y-2.5 text-sm text-white/95 flex-1">
+                <ul className="space-y-2.5 text-sm text-white/95 flex-1 pb-5">
                   {p.items.map((i) => (
                     <li key={i} className="flex gap-2">
                       <span className="text-white/70">•</span>
