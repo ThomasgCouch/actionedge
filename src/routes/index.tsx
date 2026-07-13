@@ -10,16 +10,16 @@ import { Globe2, Trophy, ShieldCheck, Target } from "lucide-react";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "ActionEDGE — Strategy, People & Culture Transformation" },
+      { title: "ActionEDGE | Strategy, People & Culture Transformation" },
       {
         name: "description",
         content:
           "ActionEDGE partners with Caribbean leaders to translate strategy into results, develop high-performing people, and build cultures that drive sustainable growth.",
       },
-      { property: "og:title", content: "ActionEDGE — Strategy, People & Culture" },
+      { property: "og:title", content: "ActionEDGE | Strategy, People & Culture" },
       {
         property: "og:description",
-        content: "Turning clarity into execution — and potential into measurable success.",
+        content: "Turning clarity into execution | and potential into measurable success.",
       },
     ],
   }),
@@ -88,14 +88,14 @@ function Home() {
         <div className="mt-8 space-y-5 text-lg text-[var(--brand-grey)] leading-relaxed">
           <p>
             At ActionEDGE, our approach is grounded in innovation, resilience, commitment,
-            abundance, agility and fun — bringing together world-class methodologies, behavioural
+            abundance, agility and fun | bringing together world-class methodologies, behavioural
             science, and instructional design to create solutions that are personalized, practical,
             relevant, and built for real-world impact.
           </p>
           <p>
             We design experiences that shift mindsets, strengthen capability, and drive measurable
             results. Lasting success comes from alignment between mission, strategy, business
-            development, people, and execution — and when that alignment happens, organizations
+            development, people, and execution | and when that alignment happens, organizations
             don't just grow, they achieve sustainable, exponential growth.
           </p>
         </div>

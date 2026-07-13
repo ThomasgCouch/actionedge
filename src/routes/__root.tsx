@@ -77,13 +77,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "ActionEDGE TT — Strategy, People & Culture" },
+      { title: "ActionEDGE TT | Strategy, People & Culture" },
       {
         name: "description",
         content:
           "ActionEDGE TT partners with leaders to translate strategy into execution, develop people, and transform culture for sustainable, exponential growth.",
       },
-      { property: "og:title", content: "ActionEDGE TT — Strategy, People & Culture" },
+      { property: "og:title", content: "ActionEDGE TT | Strategy, People & Culture" },
       {
         property: "og:description",
         content:

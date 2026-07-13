@@ -7,13 +7,13 @@ import { useState } from "react";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — ActionEDGE" },
+      { title: "Contact | ActionEDGE" },
       {
         name: "description",
         content:
           "Reach the ActionEDGE team for meetings, workshops, DISC assessments, and general inquiries.",
       },
-      { property: "og:title", content: "Contact — ActionEDGE" },
+      { property: "og:title", content: "Contact | ActionEDGE" },
       { property: "og:description", content: "Let's talk about your next chapter of growth." },
     ],
   }),
@@ -44,7 +44,7 @@ const contacts = [
 const faqs = [
   {
     q: "Who does ActionEDGE typically work with?",
-    a: "We partner with executives, senior leadership teams, and organizations across the Caribbean — from banking and energy to retail, manufacturing, education and services.",
+    a: "We partner with executives, senior leadership teams, and organizations across the Caribbean | from banking and energy to retail, manufacturing, education and services.",
   },
   {
     q: "Do you offer one-on-one coaching?",

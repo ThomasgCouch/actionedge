@@ -4,13 +4,13 @@ import { PageShell } from "@/components/site/PageShell";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — ActionEDGE" },
+      { title: "About | ActionEDGE" },
       {
         name: "description",
         content:
           "ActionEDGE partners with leaders across the Caribbean to align strategy, people, culture, and execution for sustainable, measurable growth.",
       },
-      { property: "og:title", content: "About — ActionEDGE" },
+      { property: "og:title", content: "About | ActionEDGE" },
       { property: "og:description", content: "Our values, why leaders choose us, and 30+ year track record." },
     ],
   }),
@@ -27,7 +27,7 @@ const valueTiles = [
 ];
 
 const reasons = [
-  { title: "Holistic Approach", body: "We align strategy, leadership, culture, people, and execution to create sustainable business transformation — not isolated solutions." },
+  { title: "Holistic Approach", body: "We align strategy, leadership, culture, people, and execution to create sustainable business transformation | not isolated solutions." },
   { title: "Customized, Not Off-the-Shelf", body: "Every solution is designed around your people, strategy, culture, and business goals." },
   { title: "Measurable Impact", body: "Everything we do is designed to create practical, visible, and measurable business results." },
   { title: "Behaviour Change That Lasts", body: "Our approach goes beyond training to shift mindsets, habits, leadership, and performance." },
@@ -237,7 +237,7 @@ function AboutPage() {
           consistently going beyond expectations to deliver meaningful, lasting impact.
         </p>
         <p className="text-lg text-[var(--brand-grey)] leading-relaxed">
-          Our solutions are tailored, practical, and built for real-world execution — empowering
+          Our solutions are tailored, practical, and built for real-world execution | empowering
           individuals and organizations to perform at the highest level.
         </p>
       </section>

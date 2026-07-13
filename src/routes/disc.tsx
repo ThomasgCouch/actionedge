@@ -5,13 +5,13 @@ import { AnimatedDisc } from "@/components/site/AnimatedAccents";
 export const Route = createFileRoute("/disc")({
   head: () => ({
     meta: [
-      { title: "DISC Assessments — ActionEDGE" },
+      { title: "DISC Assessments | ActionEDGE" },
       {
         name: "description",
         content:
           "DISC assessments help leaders and teams understand behavioural styles, communicate better, and perform at a higher level.",
       },
-      { property: "og:title", content: "DISC Assessments — ActionEDGE" },
+      { property: "og:title", content: "DISC Assessments | ActionEDGE" },
       {
         property: "og:description",
         content: "Behavioural insight that drives stronger communication, teamwork and leadership.",
@@ -51,7 +51,7 @@ const useCases = [
   },
   {
     title: "Customer Service",
-    body: "Use DISC to fine-tune how to exceed customer expectations. Convert every service interaction into a positive experience — regardless of the customer's buying style.",
+    body: "Use DISC to fine-tune how to exceed customer expectations. Convert every service interaction into a positive experience | regardless of the customer's buying style.",
   },
 ];
 
@@ -143,14 +143,14 @@ function DiscPage() {
             <h4 className="font-bold text-[var(--brand-green)] mb-2">Integrated Into Business Performance & Culture</h4>
             <p className="text-sm text-[var(--brand-grey)] leading-relaxed">
               Our DISC solutions are aligned with leadership development, organizational culture,
-              sales performance, and team effectiveness — making the assessment a strategic
+              sales performance, and team effectiveness | making the assessment a strategic
               business tool, not just a personality test.
             </p>
           </div>
           <div>
             <h4 className="font-bold text-[var(--brand-green)] mb-2">Coaching + Interpretation Support</h4>
             <p className="text-sm text-[var(--brand-grey)] leading-relaxed">
-              We don't just deliver assessments — we guide the interpretation through coaching
+              We don't just deliver assessments | we guide the interpretation through coaching
               conversations, and actionable development strategies to ensure meaningful behavioural
               change and growth.
             </p>

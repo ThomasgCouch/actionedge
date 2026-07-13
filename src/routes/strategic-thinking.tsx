@@ -15,13 +15,13 @@ import {
 export const Route = createFileRoute("/strategic-thinking")({
   head: () => ({
     meta: [
-      { title: "Strategic Thinking & Execution Planning — ActionEDGE" },
+      { title: "Strategic Thinking & Execution Planning | ActionEDGE" },
       {
         name: "description",
         content:
           "Turning vision into focused, measurable action. We help leaders bridge the gap between strategy and results.",
       },
-      { property: "og:title", content: "Strategic Thinking & Execution Planning — ActionEDGE" },
+      { property: "og:title", content: "Strategic Thinking & Execution Planning | ActionEDGE" },
       { property: "og:description", content: "Sharp strategy. Disciplined execution. Compounding results." },
     ],
   }),
@@ -85,7 +85,7 @@ function StrategyPage() {
         </div>
       </section>
 
-      {/* Offers — numbered editorial list */}
+      {/* Offers | numbered editorial list */}
       <section className="bg-[var(--brand-beige)]/10">
         <div className="mx-auto max-w-7xl px-6 md:px-10 py-20 md:py-24">
           <h2 className="text-3xl md:text-4xl font-bold text-[var(--brand-green)] mb-14">

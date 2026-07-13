@@ -15,14 +15,14 @@ import {
 export const Route = createFileRoute("/people-development")({
   head: () => ({
     meta: [
-      { title: "People Development — ActionEDGE" },
+      { title: "People Development | ActionEDGE" },
       {
         name: "description",
         content:
           "Developing people who drive performance. Leadership, coaching, sales training and team development built for real-world impact.",
       },
-      { property: "og:title", content: "People Development — ActionEDGE" },
-      { property: "og:description", content: "Invest in your greatest asset — your people." },
+      { property: "og:title", content: "People Development | ActionEDGE" },
+      { property: "og:description", content: "Invest in your greatest asset | your people." },
     ],
   }),
   component: PeoplePage,
@@ -77,7 +77,7 @@ function PeoplePage() {
         </div>
       </section>
 
-      {/* Offers — horizontal media rows */}
+      {/* Offers | horizontal media rows */}
       <section className="bg-[var(--brand-beige)]/10">
         <div className="mx-auto max-w-7xl px-6 md:px-10 py-20 md:py-24">
           <h2 className="text-3xl md:text-4xl font-bold text-[var(--brand-green)] text-center mb-14">
@@ -110,7 +110,7 @@ function PeoplePage() {
       {/* CTA */}
       <section className="mx-auto max-w-4xl px-6 md:px-10 py-20 md:py-24 text-center">
         <h2 className="text-3xl md:text-5xl font-bold text-[var(--brand-grey)]">
-          Invest in Your Greatest Asset — Your People
+          Invest in Your Greatest Asset | Your People
         </h2>
         <p className="mt-8 text-xl md:text-2xl text-[var(--brand-green)] font-semibold leading-snug">
           Develop the leadership, confidence, and capability to perform at your highest level and
