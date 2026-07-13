@@ -204,12 +204,28 @@ function AboutHeroAnimation() {
 function AboutPage() {
   return (
     <PageShell>
-      <PageHero
-        eyebrow="About ActionEDGE"
-        title="Growth is intentional, not accidental."
-        intro="We partner with leaders across the Caribbean to align strategy, people, culture and execution."
-      />
-      <AboutHeroAnimation />
+      {/* Hero with animation beside text */}
+      <section className="border-b border-border">
+        <div className="mx-auto max-w-7xl px-6 md:px-10 py-16 md:py-24">
+          <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+            <div>
+              <p className="text-base uppercase tracking-[0.25em] text-[var(--brand-blue)] font-semibold mb-6">
+                About ActionEDGE
+              </p>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--brand-green)] leading-tight">
+                Growth is intentional, not accidental.
+              </h1>
+              <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
+                We partner with leaders across the Caribbean to align strategy, people, culture and
+                execution.
+              </p>
+            </div>
+            <div className="mx-auto w-full max-w-md">
+              <AboutHeroAnimation />
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Commitment band */}
       <section className="mx-auto max-w-7xl px-6 md:px-10 py-20 md:py-24 grid md:grid-cols-2 gap-14 items-center">
