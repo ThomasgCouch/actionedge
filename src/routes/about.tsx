@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { PageShell, PageHero } from "@/components/site/PageShell";
+import { PageShell } from "@/components/site/PageShell";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
