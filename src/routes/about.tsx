@@ -43,6 +43,164 @@ const stats = [
   { figure: "20%", label: "Annual Growth", sub: "Consistent year-over-year business expansion" },
 ];
 
+function AboutHeroAnimation() {
+  return (
+    <div className="w-full h-64 md:h-80 overflow-hidden relative">
+      <svg
+        className="absolute inset-0 w-full h-full"
+        viewBox="0 0 800 320"
+        preserveAspectRatio="xMidYMid slice"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <linearGradient id="stemGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+            <stop offset="0%" stopColor="var(--brand-green)" />
+            <stop offset="100%" stopColor="var(--brand-blue)" />
+          </linearGradient>
+        </defs>
+
+        {/* Ground / horizon line */}
+        <line
+          x1="0"
+          y1="300"
+          x2="800"
+          y2="300"
+          stroke="var(--brand-beige)"
+          strokeWidth="2"
+          strokeDasharray="8 8"
+          opacity="0.6"
+        />
+
+        {/* Growing stem */}
+        <path
+          d="M400,300 Q400,240 400,180"
+          fill="none"
+          stroke="url(#stemGrad)"
+          strokeWidth="6"
+          strokeLinecap="round"
+          className="about-stem"
+          style={{ strokeDasharray: 130, strokeDashoffset: 130 }}
+        />
+
+        {/* Branches */}
+        <path
+          d="M400,240 Q360,220 340,190"
+          fill="none"
+          stroke="var(--brand-green)"
+          strokeWidth="4"
+          strokeLinecap="round"
+          className="about-branch"
+          style={{ strokeDasharray: 80, strokeDashoffset: 80 }}
+        />
+        <path
+          d="M400,210 Q440,190 460,160"
+          fill="none"
+          stroke="var(--brand-blue)"
+          strokeWidth="4"
+          strokeLinecap="round"
+          className="about-branch"
+          style={{ strokeDasharray: 80, strokeDashoffset: 80 }}
+        />
+
+        {/* Leaves */}
+        <g className="about-leaf" style={{ opacity: 0, transformOrigin: "340px 190px" }}>
+          <ellipse cx="340" cy="190" rx="20" ry="10" fill="var(--brand-green)" transform="rotate(-30 340 190)" />
+        </g>
+        <g className="about-leaf" style={{ opacity: 0, transformOrigin: "460px 160px" }}>
+          <ellipse cx="460" cy="160" rx="20" ry="10" fill="var(--brand-blue)" transform="rotate(30 460 160)" />
+        </g>
+        <g className="about-leaf" style={{ opacity: 0, transformOrigin: "400px 150px" }}>
+          <ellipse cx="400" cy="150" rx="24" ry="12" fill="var(--brand-green)" transform="rotate(0 400 150)" />
+        </g>
+
+        {/* Orbiting connection nodes */}
+        <circle cx="260" cy="240" r="5" fill="var(--brand-grey)" className="about-node" />
+        <circle cx="540" cy="200" r="5" fill="var(--brand-grey)" className="about-node" />
+        <circle cx="620" cy="260" r="5" fill="var(--brand-beige)" className="about-node" />
+        <circle cx="180" cy="200" r="5" fill="var(--brand-beige)" className="about-node" />
+
+        {/* Connecting pulses to the stem */}
+        <path
+          d="M260,240 Q330,230 400,240"
+          fill="none"
+          stroke="var(--brand-grey)"
+          strokeWidth="2"
+          opacity="0.5"
+          className="about-pulse"
+        />
+        <path
+          d="M540,200 Q470,205 400,210"
+          fill="none"
+          stroke="var(--brand-grey)"
+          strokeWidth="2"
+          opacity="0.5"
+          className="about-pulse"
+        />
+        <path
+          d="M180,200 Q290,210 400,220"
+          fill="none"
+          stroke="var(--brand-beige)"
+          strokeWidth="2"
+          opacity="0.5"
+          className="about-pulse"
+        />
+        <path
+          d="M620,260 Q510,245 400,250"
+          fill="none"
+          stroke="var(--brand-beige)"
+          strokeWidth="2"
+          opacity="0.5"
+          className="about-pulse"
+        />
+      </svg>
+
+      <style>{`
+        @keyframes aboutGrowStem {
+          0% { stroke-dashoffset: 130; }
+          40% { stroke-dashoffset: 0; }
+          100% { stroke-dashoffset: 0; }
+        }
+        @keyframes aboutGrowBranch {
+          0%, 25% { stroke-dashoffset: 80; }
+          60% { stroke-dashoffset: 0; }
+          100% { stroke-dashoffset: 0; }
+        }
+        @keyframes aboutLeafIn {
+          0%, 50% { opacity: 0; transform: scale(0.6); }
+          70% { opacity: 1; transform: scale(1.05); }
+          100% { opacity: 1; transform: scale(1); }
+        }
+        @keyframes aboutNodePulse {
+          0%, 100% { transform: scale(1); opacity: 0.8; }
+          50% { transform: scale(1.6); opacity: 0.3; }
+        }
+        @keyframes aboutPulseLine {
+          0% { opacity: 0.2; }
+          50% { opacity: 0.8; }
+          100% { opacity: 0.2; }
+        }
+        .about-stem {
+          animation: aboutGrowStem 5s ease-out infinite;
+        }
+        .about-branch {
+          animation: aboutGrowBranch 5s ease-out infinite;
+        }
+        .about-leaf {
+          animation: aboutLeafIn 5s ease-out infinite;
+        }
+        .about-node {
+          animation: aboutNodePulse 5s ease-in-out infinite;
+          transform-box: fill-box;
+          transform-origin: center;
+        }
+        .about-pulse {
+          animation: aboutPulseLine 5s ease-in-out infinite;
+        }
+      `}</style>
+    </div>
+  );
+}
+
 function AboutPage() {
   return (
     <PageShell>
@@ -51,6 +209,7 @@ function AboutPage() {
         title="Growth is intentional, not accidental."
         intro="We partner with leaders across the Caribbean to align strategy, people, culture and execution."
       />
+      <AboutHeroAnimation />
 
       {/* Commitment band */}
       <section className="mx-auto max-w-7xl px-6 md:px-10 py-20 md:py-24 grid md:grid-cols-2 gap-14 items-center">
