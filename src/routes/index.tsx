@@ -99,6 +99,9 @@ function Home() {
             don't just grow, they achieve sustainable, exponential growth.
           </p>
         </div>
+        <div className="mt-10 flex justify-center">
+          <AnimatedRisingChart />
+        </div>
       </section>
 
       {/* Building High Performance band */}
