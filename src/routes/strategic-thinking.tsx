@@ -34,6 +34,7 @@ const outcomes = [
   "Execution & Accountability",
   "Sustainable Results",
   "Business Growth & Performance",
+  "Faster, Confident Decision-Making",
 ];
 
 const offers = [
