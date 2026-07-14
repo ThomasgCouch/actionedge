@@ -122,7 +122,7 @@ function PeoplePage() {
           rel="noreferrer"
           className="btn-pill-primary mt-10 inline-flex"
         >
-          Choose a Leadership Development Solution
+          Discuss a Leadership Development Solution
         </a>
       </section>
     </PageShell>
