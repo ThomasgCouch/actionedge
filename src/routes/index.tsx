@@ -156,7 +156,7 @@ function Home() {
           <h2 className="text-3xl md:text-4xl font-bold text-[var(--brand-green)] text-center mb-14">
             Meet Our Master Coach
           </h2>
-          <div className="grid md:grid-cols-[1fr_1.4fr] gap-10 md:gap-14 items-center">
+          <div className="grid md:grid-cols-[1fr_1.4fr] gap-10 md:gap-14 items-start">
             <div className="rounded-3xl overflow-hidden bg-white shadow-xl">
               <img
                 src={coachAsset.url}
