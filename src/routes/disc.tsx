@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell, PageHero } from "@/components/site/PageShell";
 import { AnimatedDisc } from "@/components/site/AnimatedAccents";
+import { Target, Layers, Users } from "lucide-react";
 
 export const Route = createFileRoute("/disc")({
   head: () => ({
