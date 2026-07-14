@@ -133,7 +133,7 @@ function DiscPage() {
         <div className="mx-auto max-w-7xl px-6 md:px-10 py-16 grid md:grid-cols-3 gap-8">
           <div>
             <h4 className="font-bold text-[var(--brand-green)] mb-2">Customized, Results-Driven Application</h4>
-            <p className="text-sm text-[var(--brand-grey)] leading-relaxed">
+            <p className="text-sm text-[var(--brand-grey)] leading-relaxed text-justify">
               At ActionEDGE, DISC goes beyond a report. We help individuals and organizations
               understand how to practically apply behavioural insights to improve leadership,
               communication, team dynamics, hiring, and performance.
@@ -141,7 +141,7 @@ function DiscPage() {
           </div>
           <div>
             <h4 className="font-bold text-[var(--brand-green)] mb-2">Integrated Into Business Performance & Culture</h4>
-            <p className="text-sm text-[var(--brand-grey)] leading-relaxed">
+            <p className="text-sm text-[var(--brand-grey)] leading-relaxed text-justify">
               Our DISC solutions are aligned with leadership development, organizational culture,
               sales performance, and team effectiveness, making the assessment a strategic
               business tool, not just a personality test.
@@ -149,7 +149,7 @@ function DiscPage() {
           </div>
           <div>
             <h4 className="font-bold text-[var(--brand-green)] mb-2">Coaching + Interpretation Support</h4>
-            <p className="text-sm text-[var(--brand-grey)] leading-relaxed">
+            <p className="text-sm text-[var(--brand-grey)] leading-relaxed text-justify">
               We don't just deliver assessments. We guide the interpretation through coaching
               conversations, and actionable development strategies to ensure meaningful behavioural
               change and growth.
