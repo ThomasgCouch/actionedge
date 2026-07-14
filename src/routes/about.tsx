@@ -216,7 +216,7 @@ function AboutPage() {
                 About ActionEDGE
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--brand-green)] leading-tight">
-                Growth is intentional,{" "}
+                <span className="whitespace-nowrap">Growth is intentional,</span>{" "}
                 <span className="whitespace-nowrap">not accidental.</span>
               </h1>
               <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
