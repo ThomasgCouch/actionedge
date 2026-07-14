@@ -4,7 +4,7 @@ import { HeroRotator } from "@/components/site/HeroRotator";
 import { Newsletter } from "@/components/site/Newsletter";
 import { AnimatedRisingChart } from "@/components/site/AnimatedAccents";
 import coachAsset from "@/assets/coach-indira.jpg.asset.json";
-import ctaImg from "@/assets/home-cta.jpg";
+import ctaAsset from "@/assets/home-cta.jpg.asset.json";
 import { Globe2, Trophy, ShieldCheck, Target } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -214,7 +214,7 @@ function Home() {
           </a>
         </div>
         <div className="rounded-3xl overflow-hidden aspect-[4/3] shadow-xl">
-          <img src={ctaImg} alt="" width={1024} height={1024} loading="lazy" className="w-full h-full object-cover" />
+          <img src={ctaAsset.url} alt="Team collaborating on strategy" width={1024} height={768} loading="lazy" className="w-full h-full object-cover" />
         </div>
       </section>
 
