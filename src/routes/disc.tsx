@@ -55,6 +55,8 @@ const useCases = [
   },
 ];
 
+const useCaseClass = "text-sm text-white/95 leading-relaxed text-justify";
+
 const products = [
   {
     name: "DISC EIQ",
@@ -169,7 +171,7 @@ function DiscPage() {
               <h3 className="text-lg font-bold text-center pb-3 border-b border-white/25 mb-4">
                 {u.title}
               </h3>
-              <p className="text-sm text-white/95 leading-relaxed">{u.body}</p>
+              <p className={useCaseClass}>{u.body}</p>
             </article>
           ))}
         </div>
