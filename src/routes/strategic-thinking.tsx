@@ -68,7 +68,7 @@ function StrategyPage() {
 
 
 
-        <div className="mt-14 grid md:grid-cols-[auto_1fr] gap-8 md:gap-12 items-center">
+        <div className="mt-14 grid md:grid-cols-[auto_1fr] gap-8 md:gap-12 items-start">
           <div className="mx-auto">
             <AnimatedLightbulb />
           </div>
