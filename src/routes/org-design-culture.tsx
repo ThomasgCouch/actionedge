@@ -43,6 +43,7 @@ const outcomes = [
   "Team Engagement & Collaboration",
   "Leadership Integration",
   "High-Performance Work Environments",
+  "Sustainable Growth & Scalability",
 ];
 
 const offers = [
@@ -68,7 +69,7 @@ function OrgPage() {
 
       {/* Intro */}
       <section className="mx-auto max-w-7xl px-6 md:px-10 py-16 md:py-20">
-        <p className="text-lg text-[var(--brand-grey)] leading-relaxed max-w-5xl">
+        <p className="text-lg text-[var(--brand-grey)] leading-relaxed max-w-5xl text-justify">
           Align your leadership, people, and operations to build a stronger culture, improve
           collaboration, and create more effective ways of working.
         </p>
