@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell, PageHero } from "@/components/site/PageShell";
 import { AnimatedDisc } from "@/components/site/AnimatedAccents";
+import { Target, Layers, Users } from "lucide-react";
 
 export const Route = createFileRoute("/disc")({
   head: () => ({
@@ -132,30 +133,50 @@ function DiscPage() {
 
       {/* Three text blocks */}
       <section className="bg-[var(--brand-beige)]/10">
-        <div className="mx-auto max-w-7xl px-6 md:px-10 py-16 grid md:grid-cols-3 gap-8">
-          <div>
-            <h4 className="font-bold text-[var(--brand-green)] mb-2">Customized, Results-Driven Application</h4>
-            <p className="text-sm text-[var(--brand-grey)] leading-relaxed text-justify">
-              At ActionEDGE, DISC goes beyond a report. We help individuals and organizations
-              understand how to practically apply behavioural insights to improve leadership,
-              communication, team dynamics, hiring, and performance.
-            </p>
-          </div>
-          <div>
-            <h4 className="font-bold text-[var(--brand-green)] mb-2">Integrated Into Business Performance & Culture</h4>
-            <p className="text-sm text-[var(--brand-grey)] leading-relaxed text-justify">
-              Our DISC solutions are aligned with leadership development, organizational culture,
-              sales performance, and team effectiveness, making the assessment a strategic
-              business tool, not just a personality test.
-            </p>
-          </div>
-          <div>
-            <h4 className="font-bold text-[var(--brand-green)] mb-2">Coaching + Interpretation Support</h4>
-            <p className="text-sm text-[var(--brand-grey)] leading-relaxed text-justify">
-              We don't just deliver assessments. We guide the interpretation through coaching
-              conversations, and actionable development strategies to ensure meaningful behavioural
-              change and growth.
-            </p>
+        <div className="mx-auto max-w-7xl px-6 md:px-10 py-16 md:py-20">
+          <h2 className="text-3xl md:text-4xl font-bold text-[var(--brand-green)] text-center mb-12">
+            How We Deliver DISC
+          </h2>
+          <div className="space-y-4">
+            <article className="group flex items-start gap-5 bg-white rounded-2xl p-6 border border-[var(--brand-green)]/10 hover:border-[var(--brand-green)]/30 hover:shadow-md transition-all">
+              <div className="shrink-0 w-14 h-14 rounded-2xl bg-[var(--brand-green)]/10 flex items-center justify-center group-hover:bg-[var(--brand-green)] transition-colors">
+                <Target className="w-6 h-6 text-[var(--brand-green)] group-hover:text-white transition-colors" strokeWidth={1.75} />
+              </div>
+              <div>
+                <h4 className="text-lg font-bold text-[var(--brand-green)] mb-2">Customized, Results-Driven Application</h4>
+                <p className="text-sm text-[var(--brand-grey)] leading-relaxed text-justify">
+                  At ActionEDGE, DISC goes beyond a report. We help individuals and organizations
+                  understand how to practically apply behavioural insights to improve leadership,
+                  communication, team dynamics, hiring, and performance.
+                </p>
+              </div>
+            </article>
+            <article className="group flex items-start gap-5 bg-white rounded-2xl p-6 border border-[var(--brand-green)]/10 hover:border-[var(--brand-green)]/30 hover:shadow-md transition-all">
+              <div className="shrink-0 w-14 h-14 rounded-2xl bg-[var(--brand-blue)]/10 flex items-center justify-center group-hover:bg-[var(--brand-blue)] transition-colors">
+                <Layers className="w-6 h-6 text-[var(--brand-blue)] group-hover:text-white transition-colors" strokeWidth={1.75} />
+              </div>
+              <div>
+                <h4 className="text-lg font-bold text-[var(--brand-green)] mb-2">Integrated Into Business Performance & Culture</h4>
+                <p className="text-sm text-[var(--brand-grey)] leading-relaxed text-justify">
+                  Our DISC solutions are aligned with leadership development, organizational culture,
+                  sales performance, and team effectiveness, making the assessment a strategic
+                  business tool, not just a personality test.
+                </p>
+              </div>
+            </article>
+            <article className="group flex items-start gap-5 bg-white rounded-2xl p-6 border border-[var(--brand-green)]/10 hover:border-[var(--brand-green)]/30 hover:shadow-md transition-all">
+              <div className="shrink-0 w-14 h-14 rounded-2xl bg-[var(--brand-grey)]/10 flex items-center justify-center group-hover:bg-[var(--brand-grey)] transition-colors">
+                <Users className="w-6 h-6 text-[var(--brand-grey)] group-hover:text-white transition-colors" strokeWidth={1.75} />
+              </div>
+              <div>
+                <h4 className="text-lg font-bold text-[var(--brand-green)] mb-2">Coaching + Interpretation Support</h4>
+                <p className="text-sm text-[var(--brand-grey)] leading-relaxed text-justify">
+                  We don't just deliver assessments. We guide the interpretation through coaching
+                  conversations, and actionable development strategies to ensure meaningful behavioural
+                  change and growth.
+                </p>
+              </div>
+            </article>
           </div>
         </div>
       </section>
