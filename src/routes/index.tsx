@@ -198,7 +198,7 @@ function Home() {
       </section>
 
       {/* From strategy to leadership CTA */}
-      <section className="mx-auto max-w-7xl px-6 md:px-10 py-20 md:py-28 grid md:grid-cols-2 gap-12 items-center">
+      <section className="mx-auto max-w-7xl px-6 md:px-10 py-20 md:py-28 grid md:grid-cols-2 gap-12 items-start">
         <div>
           <h2 className="text-3xl md:text-4xl font-bold text-[var(--brand-green)] leading-tight">
             From strategy to leadership, business growth to career success, we help you turn
