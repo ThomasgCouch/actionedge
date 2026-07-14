@@ -4,7 +4,7 @@ import { HeroRotator } from "@/components/site/HeroRotator";
 import { Newsletter } from "@/components/site/Newsletter";
 import { AnimatedRisingChart } from "@/components/site/AnimatedAccents";
 import coachAsset from "@/assets/coach-indira.jpg.asset.json";
-import ctaImg from "@/assets/home-cta.jpg";
+import ctaAsset from "@/assets/home-cta.jpg.asset.json";
 import { Globe2, Trophy, ShieldCheck, Target } from "lucide-react";
 
 export const Route = createFileRoute("/")({
