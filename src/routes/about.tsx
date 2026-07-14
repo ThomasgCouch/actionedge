@@ -210,7 +210,7 @@ function AboutPage() {
       {/* Hero with animation beside text */}
       <section className="border-b border-border">
         <div className="mx-auto max-w-7xl px-6 md:px-10 py-16 md:py-24">
-          <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+          <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
             <div>
               <p className="text-base uppercase tracking-[0.25em] text-[var(--brand-blue)] font-semibold mb-6">
                 About ActionEDGE
