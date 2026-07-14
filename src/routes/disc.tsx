@@ -188,7 +188,7 @@ function DiscPage() {
               <div className="rounded-2xl bg-[var(--brand-grey)] text-white text-2xl font-bold text-center py-8">
                 {p.name}
               </div>
-              <p className="text-[var(--brand-grey)] leading-relaxed">{p.body}</p>
+              <p className="text-[var(--brand-grey)] leading-relaxed text-justify">{p.body}</p>
             </article>
           ))}
         </div>
