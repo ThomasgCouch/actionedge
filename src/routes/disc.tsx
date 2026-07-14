@@ -111,7 +111,7 @@ function DiscPage() {
       <section className="mx-auto max-w-7xl px-6 md:px-10 pb-16 grid md:grid-cols-2 gap-6">
         <div className="rounded-3xl bg-[var(--brand-green)] text-white p-8 md:p-10">
           <h3 className="text-2xl font-bold mb-4">What is DISC?</h3>
-          <p className="text-white/90 leading-relaxed">
+          <p className="text-white/90 leading-relaxed text-justify">
             While many associate DISC with personality types, it actually focuses on distinct
             behavioural styles, helping people understand how their behaviours affect
             communication, influence, interactions and decision-making. The DISC model is widely
@@ -120,7 +120,7 @@ function DiscPage() {
         </div>
         <div className="rounded-3xl bg-[var(--brand-grey)] text-white p-8 md:p-10">
           <h3 className="text-2xl font-bold mb-4">What is the DISC assessment used for?</h3>
-          <p className="text-white/90 leading-relaxed">
+          <p className="text-white/90 leading-relaxed text-justify">
             Whether you're the manager of a large or small organization, or an individual seeking
             communication skills, our DISC reports offer the greatest accuracy for a range of
             dynamic business applications.
