@@ -214,7 +214,7 @@ function Home() {
           </a>
         </div>
         <div className="rounded-3xl overflow-hidden aspect-[4/3] shadow-xl">
-          <img src={ctaImg} alt="" width={1024} height={1024} loading="lazy" className="w-full h-full object-cover" />
+          <img src={ctaAsset.url} alt="Team collaborating on strategy" width={1024} height={768} loading="lazy" className="w-full h-full object-cover" />
         </div>
       </section>
 
