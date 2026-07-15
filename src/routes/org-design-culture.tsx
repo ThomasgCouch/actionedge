@@ -111,7 +111,7 @@ function OrgPage() {
                 <article
                   key={o.title}
                   onClick={() => toggleOffer(i)}
-                  className={`group relative bg-white p-8 hover:bg-[var(--brand-green)] transition-colors min-h-[220px] flex flex-col cursor-pointer ${isActive ? "bg-[var(--brand-green)]" : ""}`}
+                  className={`group relative p-8 transition-colors min-h-[220px] flex flex-col cursor-pointer ${isActive ? "bg-[var(--brand-green)]" : "bg-white hover:bg-[var(--brand-green)]"}`}
                 >
                   <o.icon
                     className={`w-9 h-9 transition-colors ${isActive ? "text-white" : "text-[var(--brand-green)] group-hover:text-white"}`}
