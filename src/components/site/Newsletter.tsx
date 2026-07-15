@@ -116,7 +116,7 @@ export function Footer() {
                   key={social.label}
                   href={social.href}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white text-[var(--brand-green)] hover:bg-[var(--brand-blue)] hover:text-white transition-colors"
                   aria-label={`Follow on ${social.label}`}
                 >
