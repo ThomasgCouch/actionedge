@@ -1,32 +1,27 @@
-## Goal
-Let the client edit the Events page by changing one small, well-commented file — no database, no login.
+## Plan: Refine About Page Commitment Band
 
-## What I'll build
+### Current state
+- Located in `src/routes/about.tsx` lines 234–244.
+- Text currently reads: “We bring clarity, energy, and an unwavering commitment to every partnership — consistently going beyond expectations to deliver meaningful, lasting impact.”
+- Layout is a two-column grid with left-aligned text.
+- A long em dash sits between the two sentence halves.
 
-1. **New file: `src/data/events.ts`**
-   - Exports an `events` array. Each entry has: `title`, `badge` (e.g. "Coming Soon", "Registration Open"), `description`, `date` (free text, e.g. "March 14, 2027"), `location`, and optional `registerUrl`.
-   - Heavy comments at the top explaining exactly how to add, edit, remove, or reorder events — written for a non-developer.
-   - Ships with the current 3 placeholder events so the page looks identical on day one.
+### Changes to make
 
-2. **Update `src/routes/events.tsx`**
-   - Import the `events` array and render one card per entry (instead of the hardcoded `[0,1,2].map`).
-   - Middle card stays brand-green automatically (every 2nd card highlighted), so visual rhythm is preserved regardless of how many events exist.
-   - If `registerUrl` is set, the card shows a "Register" link; otherwise it just shows the date/location footer as today.
-   - Empty state: if the array is empty, show a friendly "No events scheduled right now — join the mailing list" block instead of blank cards.
+1. **Remove the em dash**
+   - Delete “ —” from the first paragraph and close the sentence naturally.
+   - New text: “We bring clarity, energy, and an unwavering commitment to every partnership, consistently going beyond expectations to deliver meaningful, lasting impact.”
 
-3. **New file: `docs/EDITING-EVENTS.md`**
-   - Plain-English, screenshot-free walkthrough the client can follow:
-     - Where the file lives
-     - How to copy an existing event block to add a new one
-     - Which fields are required vs optional
-     - How to delete an event (remove the block)
-     - How to reorder (drag the blocks)
-     - A note that changes go live after Publish
-   - Includes a copy-paste template block they can duplicate.
+2. **Improve alignment and elegance**
+   - Convert the two-column grid into a single, centered column for a more editorial/quote-like presentation.
+   - Increase the line-height and add generous top/bottom padding so the block breathes.
+   - Consider a light background tint (e.g. `bg-[var(--muted)]`) to separate it visually from the hero above and the values section below.
+   - Keep the brand green text color and medium font weight for continuity.
 
-## What stays the same
-- Page layout, hero, mailing-list CTA, colors, and card styling are unchanged.
-- No new dependencies, no backend, no auth.
+### Files to edit
+- `src/routes/about.tsx` (lines 234–244)
 
-## Handoff to the client
-After this ships, I'll tell you exactly what to send them: the path to `src/data/events.ts`, the doc at `docs/EDITING-EVENTS.md`, and the reminder to hit **Publish** after editing.
+### No new dependencies or routes needed.
+
+### Approval needed
+- Should the second paragraph (“Our solutions are tailored…”) stay directly below the commitment line, or do you want it removed/moved elsewhere?

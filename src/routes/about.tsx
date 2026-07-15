@@ -232,15 +232,17 @@ function AboutPage() {
       </section>
 
       {/* Commitment band */}
-      <section className="mx-auto max-w-7xl px-6 md:px-10 py-20 md:py-24 grid md:grid-cols-2 gap-14 items-center">
-        <p className="text-2xl md:text-3xl font-medium leading-snug text-[var(--brand-green)]">
-          We bring clarity, energy, and an unwavering commitment to every partnership —
-          consistently going beyond expectations to deliver meaningful, lasting impact.
-        </p>
-        <p className="text-lg text-[var(--brand-grey)] leading-relaxed">
-          Our solutions are tailored, practical, and built for real-world execution, empowering
-          individuals and organizations to perform at the highest level.
-        </p>
+      <section className="bg-[var(--muted)]">
+        <div className="mx-auto max-w-4xl px-6 md:px-10 py-20 md:py-28 text-center">
+          <p className="text-2xl md:text-4xl font-medium leading-snug md:leading-tight text-[var(--brand-green)]">
+            We bring clarity, energy, and an unwavering commitment to every partnership, consistently
+            going beyond expectations to deliver meaningful, lasting impact.
+          </p>
+          <p className="mt-8 md:mt-10 text-lg md:text-xl text-[var(--brand-grey)] leading-relaxed max-w-3xl mx-auto">
+            Our solutions are tailored, practical, and built for real-world execution, empowering
+            individuals and organizations to perform at the highest level.
+          </p>
+        </div>
       </section>
 
       {/* Values */}
