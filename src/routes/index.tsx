@@ -16,10 +16,10 @@ export const Route = createFileRoute("/")({
         content:
           "ActionEDGE partners with Caribbean leaders to translate strategy into results, develop high-performing people, and build cultures that drive sustainable growth.",
       },
-      { property: "og:title", content: "ActionEDGE | Strategy, People & Culture" },
+      { property: "og:title", content: "ActionEDGE | Strategy, People & Culture Transformation" },
       {
         property: "og:description",
-        content: "Turning clarity into execution, and potential into measurable success.",
+        content: "ActionEDGE partners with Caribbean leaders to translate strategy into results, develop high-performing people, and build cultures that drive sustainable growth.",
       },
     ],
   }),
