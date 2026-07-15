@@ -164,7 +164,7 @@ function DiscPage() {
             How We Deliver DISC
           </h2>
           <div className="space-y-4">
-            <article className="group flex items-start gap-5 bg-white rounded-2xl p-6 border border-[var(--brand-green)]/10 hover:border-[var(--brand-green)]/30 hover:shadow-md transition-all">
+            <article className="group flex items-start gap-5 bg-[var(--muted)] rounded-2xl p-6 border border-[var(--brand-green)]/10 hover:border-[var(--brand-green)]/30 hover:shadow-md transition-all">
               <div className="shrink-0 w-14 h-14 rounded-2xl bg-[var(--brand-green)]/10 flex items-center justify-center group-hover:bg-[var(--brand-green)] transition-colors">
                 <Target className="w-6 h-6 text-[var(--brand-green)] group-hover:text-white transition-colors" strokeWidth={1.75} />
               </div>
@@ -177,7 +177,7 @@ function DiscPage() {
                 </p>
               </div>
             </article>
-            <article className="group flex items-start gap-5 bg-white rounded-2xl p-6 border border-[var(--brand-green)]/10 hover:border-[var(--brand-green)]/30 hover:shadow-md transition-all">
+            <article className="group flex items-start gap-5 bg-[var(--muted)] rounded-2xl p-6 border border-[var(--brand-green)]/10 hover:border-[var(--brand-green)]/30 hover:shadow-md transition-all">
               <div className="shrink-0 w-14 h-14 rounded-2xl bg-[var(--brand-blue)]/10 flex items-center justify-center group-hover:bg-[var(--brand-blue)] transition-colors">
                 <Layers className="w-6 h-6 text-[var(--brand-blue)] group-hover:text-white transition-colors" strokeWidth={1.75} />
               </div>
@@ -190,7 +190,7 @@ function DiscPage() {
                 </p>
               </div>
             </article>
-            <article className="group flex items-start gap-5 bg-white rounded-2xl p-6 border border-[var(--brand-green)]/10 hover:border-[var(--brand-green)]/30 hover:shadow-md transition-all">
+            <article className="group flex items-start gap-5 bg-[var(--muted)] rounded-2xl p-6 border border-[var(--brand-green)]/10 hover:border-[var(--brand-green)]/30 hover:shadow-md transition-all">
               <div className="shrink-0 w-14 h-14 rounded-2xl bg-[var(--brand-grey)]/10 flex items-center justify-center group-hover:bg-[var(--brand-grey)] transition-colors">
                 <Users className="w-6 h-6 text-[var(--brand-grey)] group-hover:text-white transition-colors" strokeWidth={1.75} />
               </div>
@@ -222,7 +222,7 @@ function DiscPage() {
           {useCases.map((u, i) => (
             <article
               key={u.title}
-              className="group relative rounded-3xl bg-white border border-[var(--brand-green)]/10 p-8 flex flex-col h-full hover:shadow-[0_12px_40px_-12px_color-mix(in_oklab,var(--brand-green)_20%,transparent)] hover:-translate-y-1 transition-all duration-300"
+              className="group relative rounded-3xl bg-[var(--muted)] border border-[var(--brand-green)]/10 p-8 flex flex-col h-full hover:shadow-[0_12px_40px_-12px_color-mix(in_oklab,var(--brand-green)_20%,transparent)] hover:-translate-y-1 transition-all duration-300"
             >
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[var(--brand-green)] to-[var(--brand-blue)] rounded-t-3xl opacity-80 group-hover:opacity-100 transition-opacity" />
               <div className="flex items-center gap-3 mb-4">
@@ -260,7 +260,7 @@ function DiscPage() {
           {products.map((p) => (
             <article
               key={p.name}
-              className="grid md:grid-cols-[220px_1fr] gap-6 md:gap-10 items-center rounded-3xl bg-white border border-[var(--brand-green)]/20 p-8"
+              className="grid md:grid-cols-[220px_1fr] gap-6 md:gap-10 items-center rounded-3xl bg-[var(--muted)] border border-[var(--brand-green)]/20 p-8"
             >
               <div className="rounded-2xl bg-[var(--brand-grey)] text-white text-2xl font-bold text-center py-8">
                 {p.name}
