@@ -254,22 +254,6 @@ function DiscPage() {
       </section>
 
 
-      {/* DISC products */}
-      <section className="bg-[var(--brand-beige)]/10">
-        <div className="mx-auto max-w-7xl px-6 md:px-10 py-20 md:py-24 space-y-6">
-          {products.map((p) => (
-            <article
-              key={p.name}
-              className="grid md:grid-cols-[220px_1fr] gap-6 md:gap-10 items-center rounded-3xl bg-[var(--muted)] border border-[var(--brand-green)]/20 p-8"
-            >
-              <div className="rounded-2xl bg-[var(--brand-grey)] text-white text-2xl font-bold text-center py-8">
-                {p.name}
-              </div>
-              <p className="text-[var(--brand-grey)] leading-relaxed">{p.body}</p>
-            </article>
-          ))}
-        </div>
-      </section>
 
       {/* Closing */}
       <section className="mx-auto max-w-7xl px-6 md:px-10 py-20 md:py-24 text-center">
