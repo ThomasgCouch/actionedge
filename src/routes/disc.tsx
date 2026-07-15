@@ -213,17 +213,26 @@ function DiscPage() {
       {/* Use cases */}
       <section className="mx-auto max-w-7xl px-6 md:px-10 py-20 md:py-24">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {useCases.map((u) => (
-            <article
-              key={u.title}
-              className="rounded-3xl bg-[var(--brand-green)] text-white p-8 hover:scale-[1.02] transition-transform"
-            >
-              <h3 className="text-lg font-bold text-center pb-3 border-b border-white/25 mb-4">
-                {u.title}
-              </h3>
-              <p className={useCaseClass}>{u.body}</p>
-            </article>
-          ))}
+          {useCases.map((u, i) => {
+            const isGreen = i % 2 === 0;
+            return (
+              <article
+                key={u.title}
+                className={`rounded-3xl text-white p-8 hover:scale-[1.02] transition-transform flex flex-col ${
+                  isGreen ? "bg-[var(--brand-green)]" : "bg-[var(--brand-grey)]"
+                }`}
+              >
+                <h3 className="text-lg font-bold text-center pb-3 border-b border-white/25 mb-4">
+                  {u.title}
+                </h3>
+                <p className={useCaseClass}>{u.body}</p>
+                <p className="mt-5 pt-4 border-t border-white/20 text-sm font-semibold text-white">
+                  {(u.toolLabel ?? "DISC Tools")}: {u.tools}
+                </p>
+              </article>
+            );
+          })}
+
         </div>
       </section>
 
