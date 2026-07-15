@@ -61,12 +61,12 @@ export function Footer() {
   ];
 
   return (
-    <footer className="border-t border-border bg-[var(--brand-white)]">
+    <footer className="border-t border-border bg-background">
       <div className="mx-auto max-w-7xl px-6 md:px-10 py-14 md:py-20">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10 items-start">
-          <div className="col-span-2 md:col-span-1">
-            <Link to="/" className="inline-flex items-center">
-              <img src={logoAsset.url} alt="ActionEDGE" className="h-16 w-auto object-contain" />
+          <div className="col-span-2 md:col-span-1 flex flex-col">
+            <Link to="/" className="inline-flex items-start">
+              <img src={logoAsset.url} alt="ActionEDGE" className="h-16 md:h-20 w-auto object-contain" />
             </Link>
           </div>
 
