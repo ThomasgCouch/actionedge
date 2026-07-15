@@ -84,20 +84,6 @@ const useCases = [
   },
 ];
 
-const products = [
-  {
-    name: "DISC EIQ",
-    body: "DISC explores how people behave, how they communicate, make decisions and interact with others. Emotional Intelligence explores how those behaviours are managed. Combining behavioural insight with emotional intelligence gives you a complete understanding of behaviour in action.",
-  },
-  {
-    name: "DISC KIDS",
-    body: "The Kids DISC assessment gives a deeper understanding of a child and their behaviour. Created especially for kids, using language that they understand. The Kids DISC report offers significant insights based on the assessment. With three distinct sections for kids, parents, and teachers, this report contains helpful information for the children and the adults in their lives.",
-  },
-  {
-    name: "DISC 360",
-    body: "Are you aware of how coworkers and direct reports perceive your actions and instincts? Completing a DISC 360° Assessment with feedback from others gives you and everyone applying leadership insights. Many leaders think their intentions and practices are clear, often overlooking costly misinterpretations. DISC 360° collects anonymous submitted, honest and transparent feedback to help better understand how others perceive you.",
-  },
-];
 
 function DiscPage() {
   return (
