@@ -211,14 +211,14 @@ function DiscPage() {
       </section>
 
       {/* Use cases */}
-      <section className="mx-auto max-w-7xl px-6 md:px-10 py-20 md:py-24">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {useCases.map((u, i) => {
+      <section className="mx-auto max-w-7xl px-6 md:px-10 py-20 md:py-24 space-y-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+          {useCases.slice(0, 6).map((u, i) => {
             const isGreen = i % 2 === 0;
             return (
               <article
                 key={u.title}
-                className={`rounded-3xl text-white p-8 hover:scale-[1.02] transition-transform flex flex-col ${
+                className={`rounded-3xl text-white p-8 hover:scale-[1.02] transition-transform flex flex-col h-full ${
                   isGreen ? "bg-[var(--brand-green)]" : "bg-[var(--brand-grey)]"
                 }`}
               >
@@ -226,15 +226,43 @@ function DiscPage() {
                   {u.title}
                 </h3>
                 <p className={useCaseClass}>{u.body}</p>
-                <p className="mt-5 pt-4 border-t border-white/20 text-sm font-semibold text-white">
+                <p className="mt-auto pt-5 text-sm font-semibold text-white text-center">
                   {(u.toolLabel ?? "DISC Tools")}: {u.tools}
                 </p>
               </article>
             );
           })}
+        </div>
 
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+          {useCases.slice(6).map((u, i) => {
+            const isGreen = i % 2 === 0;
+            return (
+              <article
+                key={u.title}
+                className={`rounded-3xl text-white p-8 hover:scale-[1.02] transition-transform flex flex-col h-full ${
+                  isGreen ? "bg-[var(--brand-green)]" : "bg-[var(--brand-grey)]"
+                }`}
+              >
+                <h3 className="text-lg font-bold text-center pb-3 border-b border-white/25 mb-4">
+                  {u.title}
+                </h3>
+                <p className={useCaseClass}>{u.body}</p>
+                <p className="mt-auto pt-5 text-sm font-semibold text-white text-center">
+                  {(u.toolLabel ?? "DISC Tools")}: {u.tools}
+                </p>
+              </article>
+            );
+          })}
+          <article className="rounded-3xl bg-[var(--brand-green)] text-white p-8 lg:col-span-2 flex items-center justify-center text-center">
+            <p className="text-lg md:text-xl font-semibold leading-relaxed">
+              Explore our DISC solutions, receive a complimentary sample report, and book a free 1:1
+              consultation to discover the right assessment for you or your organization.
+            </p>
+          </article>
         </div>
       </section>
+
 
       {/* DISC products */}
       <section className="bg-[var(--brand-beige)]/10">
