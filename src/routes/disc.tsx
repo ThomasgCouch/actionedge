@@ -140,7 +140,7 @@ function DiscPage() {
       <section className="mx-auto max-w-7xl px-6 md:px-10 pb-16 grid md:grid-cols-2 gap-6">
         <div className="rounded-3xl bg-[var(--brand-green)] text-white p-8 md:p-10">
           <h3 className="text-2xl font-bold mb-4">What is DISC?</h3>
-          <p className="text-white/90 leading-relaxed text-justify">
+          <p className="text-white/90 leading-relaxed">
             While many associate DISC with personality types, it actually focuses on distinct
             behavioural styles, helping people understand how their behaviours affect
             communication, influence, interactions and decision-making. The DISC model is widely
@@ -149,7 +149,7 @@ function DiscPage() {
         </div>
         <div className="rounded-3xl bg-[var(--brand-grey)] text-white p-8 md:p-10">
           <h3 className="text-2xl font-bold mb-4">What is the DISC assessment used for?</h3>
-          <p className="text-white/90 leading-relaxed text-justify">
+          <p className="text-white/90 leading-relaxed">
             Whether you're the manager of a large or small organization, or an individual seeking
             communication skills, our DISC reports offer the greatest accuracy for a range of
             dynamic business applications.
@@ -170,7 +170,7 @@ function DiscPage() {
               </div>
               <div>
                 <h4 className="text-lg font-bold text-[var(--brand-green)] mb-2">Customized, Results-Driven Application</h4>
-                <p className="text-sm text-[var(--brand-grey)] leading-relaxed text-justify">
+                <p className="text-sm text-[var(--brand-grey)] leading-relaxed">
                   At ActionEDGE, DISC goes beyond a report. We help individuals and organizations
                   understand how to practically apply behavioural insights to improve leadership,
                   communication, team dynamics, hiring, and performance.
@@ -183,7 +183,7 @@ function DiscPage() {
               </div>
               <div>
                 <h4 className="text-lg font-bold text-[var(--brand-green)] mb-2">Integrated Into Business Performance & Culture</h4>
-                <p className="text-sm text-[var(--brand-grey)] leading-relaxed text-justify">
+                <p className="text-sm text-[var(--brand-grey)] leading-relaxed">
                   Our DISC solutions are aligned with leadership development, organizational culture,
                   sales performance, and team effectiveness, making the assessment a strategic
                   business tool, not just a personality test.
@@ -196,7 +196,7 @@ function DiscPage() {
               </div>
               <div>
                 <h4 className="text-lg font-bold text-[var(--brand-green)] mb-2">Coaching + Interpretation Support</h4>
-                <p className="text-sm text-[var(--brand-grey)] leading-relaxed text-justify">
+                <p className="text-sm text-[var(--brand-grey)] leading-relaxed">
                   We don't just deliver assessments. We guide the interpretation through coaching
                   conversations, and actionable development strategies to ensure meaningful behavioural
                   change and growth.
@@ -233,7 +233,7 @@ function DiscPage() {
                   {u.title}
                 </h3>
               </div>
-              <p className="text-sm text-[var(--brand-grey)]/90 leading-relaxed text-justify flex-grow">
+              <p className="text-sm text-[var(--brand-grey)]/90 leading-relaxed flex-grow">
                 {u.body}
               </p>
               <div className="mt-6 pt-5 border-t border-[var(--brand-green)]/10">
@@ -265,7 +265,7 @@ function DiscPage() {
               <div className="rounded-2xl bg-[var(--brand-grey)] text-white text-2xl font-bold text-center py-8">
                 {p.name}
               </div>
-              <p className="text-[var(--brand-grey)] leading-relaxed text-justify">{p.body}</p>
+              <p className="text-[var(--brand-grey)] leading-relaxed">{p.body}</p>
             </article>
           ))}
         </div>

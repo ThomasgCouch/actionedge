@@ -85,7 +85,7 @@ function Home() {
         <h2 className="text-3xl md:text-4xl font-bold text-[var(--brand-green)]">
           How We Deliver Results
         </h2>
-        <div className="mt-8 space-y-5 text-lg text-[var(--brand-grey)] leading-relaxed text-justify">
+        <div className="mt-8 space-y-5 text-lg text-[var(--brand-grey)] leading-relaxed">
           <p>
             At ActionEDGE, our approach is grounded in innovation, resilience, commitment,
             abundance, agility and fun, bringing together world-class methodologies, behavioural
@@ -172,7 +172,7 @@ function Home() {
               <h3 className="mt-3 text-3xl md:text-4xl font-bold text-[var(--brand-grey)] leading-tight">
                 Recognized for <span className="text-[var(--brand-green)]">Impact That Matters</span>
               </h3>
-              <p className="mt-5 text-lg text-[var(--brand-grey)] leading-relaxed text-justify">
+              <p className="mt-5 text-lg text-[var(--brand-grey)] leading-relaxed">
                 Across the Caribbean and internationally, her work has been acknowledged for
                 excellence in leadership, coaching, and business transformation.
               </p>
