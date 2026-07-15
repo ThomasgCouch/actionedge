@@ -222,7 +222,7 @@ function DiscPage() {
           {useCases.map((u, i) => (
             <article
               key={u.title}
-              className="group relative rounded-3xl bg-[var(--muted)] border border-[var(--brand-green)]/10 p-8 flex flex-col h-full hover:shadow-[0_12px_40px_-12px_color-mix(in_oklab,var(--brand-green)_20%,transparent)] hover:-translate-y-1 transition-all duration-300"
+              className={`group relative rounded-3xl bg-[var(--muted)] border border-[var(--brand-green)]/10 p-8 flex flex-col h-full hover:shadow-[0_12px_40px_-12px_color-mix(in_oklab,var(--brand-green)_20%,transparent)] hover:-translate-y-1 transition-all duration-300 ${i === useCases.length - 1 ? "lg:row-start-4" : ""}`}
             >
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[var(--brand-green)] to-[var(--brand-blue)] rounded-t-3xl opacity-80 group-hover:opacity-100 transition-opacity" />
               <div className="flex items-center gap-3 mb-4">
@@ -243,13 +243,13 @@ function DiscPage() {
               </div>
             </article>
           ))}
-        </div>
 
-        <div className="mt-12 rounded-3xl bg-gradient-to-r from-[var(--brand-green)] to-[var(--brand-green)]/90 text-white p-8 md:p-10 flex items-center justify-center text-center shadow-lg">
-          <p className="text-lg md:text-xl font-semibold leading-relaxed max-w-4xl">
-            Explore our DISC solutions, receive a complimentary sample report, and book a free 1:1
-            consultation to discover the right assessment for you or your organization.
-          </p>
+          <div className="lg:col-start-2 lg:col-span-2 lg:row-start-4 md:col-span-2 rounded-3xl bg-gradient-to-r from-[var(--brand-green)] to-[var(--brand-green)]/90 text-white p-8 md:p-10 flex items-center justify-center text-center shadow-lg h-full">
+            <p className="text-lg md:text-xl font-semibold leading-relaxed max-w-4xl">
+              Explore our DISC solutions, receive a complimentary sample report, and book a free 1:1
+              consultation to discover the right assessment for you or your organization.
+            </p>
+          </div>
         </div>
       </section>
 
