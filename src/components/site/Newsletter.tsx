@@ -56,7 +56,7 @@ export function Footer() {
   ];
 
   const socials = [
-    { label: "LinkedIn", href: "https://www.linkedin.com/in/indiracouch?utm_source=share_via&utm_content=profile&utm_medium=member_android", icon: Linkedin },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/indiracouch/", icon: Linkedin },
     { label: "Instagram", href: "https://www.instagram.com/indiracouch?igsh=bWRkYmlpNGExdDBv", icon: Instagram },
   ];
 
