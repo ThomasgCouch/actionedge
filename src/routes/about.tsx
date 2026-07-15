@@ -232,7 +232,7 @@ function AboutPage() {
       </section>
 
       {/* Commitment band */}
-      <section className="bg-[var(--muted)]">
+      <section className="bg-[var(--brand-blue)]/10">
         <div className="mx-auto max-w-4xl px-6 md:px-10 py-20 md:py-28 text-center">
           <p className="text-2xl md:text-4xl font-medium leading-snug md:leading-tight text-[var(--brand-green)]">
             We bring clarity, energy, and an unwavering commitment to every partnership, consistently
@@ -244,9 +244,6 @@ function AboutPage() {
           </p>
         </div>
       </section>
-
-      {/* Divider */}
-      <div className="h-1 bg-[var(--brand-grey)]" />
 
       {/* Values */}
       <section className="bg-[var(--brand-beige)]/10">
