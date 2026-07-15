@@ -84,9 +84,6 @@ const useCases = [
   },
 ];
 
-const useCaseClass = "text-sm text-white/95 leading-relaxed text-justify";
-
-
 const products = [
   {
     name: "DISC EIQ",
@@ -211,55 +208,48 @@ function DiscPage() {
       </section>
 
       {/* Use cases */}
-      <section className="mx-auto max-w-7xl px-6 md:px-10 py-20 md:py-24 space-y-6">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
-          {useCases.slice(0, 6).map((u, i) => {
-            const isGreen = i % 2 === 0;
-            return (
-              <article
-                key={u.title}
-                className={`rounded-3xl text-white p-8 hover:scale-[1.02] transition-transform flex flex-col h-full ${
-                  isGreen ? "bg-[var(--brand-green)]" : "bg-[var(--brand-grey)]"
-                }`}
-              >
-                <h3 className="text-lg font-bold text-center pb-3 border-b border-white/25 mb-4">
-                  {u.title}
-                </h3>
-                <p className={useCaseClass}>{u.body}</p>
-                <p className="mt-auto pt-5 text-sm font-semibold text-white text-center">
-                  {(u.toolLabel ?? "DISC Tools")}: {u.tools}
-                </p>
-              </article>
-            );
-          })}
+      <section className="mx-auto max-w-7xl px-6 md:px-10 py-20 md:py-24">
+        <div className="text-center max-w-3xl mx-auto mb-14">
+          <h2 className="text-3xl md:text-4xl font-bold text-[var(--brand-green)]">
+            Where DISC Makes the Difference
+          </h2>
+          <p className="mt-4 text-lg text-[var(--brand-grey)]">
+            Practical applications for leadership, teams, hiring, and relationships.
+          </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
-          {useCases.slice(6).map((u, i) => {
-            const isGreen = i % 2 === 0;
-            return (
-              <article
-                key={u.title}
-                className={`rounded-3xl text-white p-8 hover:scale-[1.02] transition-transform flex flex-col h-full ${
-                  isGreen ? "bg-[var(--brand-green)]" : "bg-[var(--brand-grey)]"
-                }`}
-              >
-                <h3 className="text-lg font-bold text-center pb-3 border-b border-white/25 mb-4">
+          {useCases.map((u, i) => (
+            <article
+              key={u.title}
+              className="group relative rounded-3xl bg-white border border-[var(--brand-green)]/10 p-8 flex flex-col h-full hover:shadow-[0_12px_40px_-12px_color-mix(in_oklab,var(--brand-green)_20%,transparent)] hover:-translate-y-1 transition-all duration-300"
+            >
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[var(--brand-green)] to-[var(--brand-blue)] rounded-t-3xl opacity-80 group-hover:opacity-100 transition-opacity" />
+              <div className="flex items-center gap-3 mb-4">
+                <span className="w-9 h-9 rounded-full bg-[var(--brand-green)]/10 text-[var(--brand-green)] flex items-center justify-center text-sm font-bold group-hover:bg-[var(--brand-green)] group-hover:text-white transition-colors">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <h3 className="text-lg font-bold text-[var(--brand-green)] leading-tight">
                   {u.title}
                 </h3>
-                <p className={useCaseClass}>{u.body}</p>
-                <p className="mt-auto pt-5 text-sm font-semibold text-white text-center">
+              </div>
+              <p className="text-sm text-[var(--brand-grey)]/90 leading-relaxed text-justify flex-grow">
+                {u.body}
+              </p>
+              <div className="mt-6 pt-5 border-t border-[var(--brand-green)]/10">
+                <p className="text-xs font-semibold tracking-wide text-[var(--brand-blue)] uppercase">
                   {(u.toolLabel ?? "DISC Tools")}: {u.tools}
                 </p>
-              </article>
-            );
-          })}
-          <article className="rounded-3xl bg-[var(--brand-green)] text-white p-8 lg:col-span-2 flex items-center justify-center text-center">
-            <p className="text-lg md:text-xl font-semibold leading-relaxed">
-              Explore our DISC solutions, receive a complimentary sample report, and book a free 1:1
-              consultation to discover the right assessment for you or your organization.
-            </p>
-          </article>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <div className="mt-12 rounded-3xl bg-gradient-to-r from-[var(--brand-green)] to-[var(--brand-green)]/90 text-white p-8 md:p-10 flex items-center justify-center text-center shadow-lg">
+          <p className="text-lg md:text-xl font-semibold leading-relaxed max-w-4xl">
+            Explore our DISC solutions, receive a complimentary sample report, and book a free 1:1
+            consultation to discover the right assessment for you or your organization.
+          </p>
         </div>
       </section>
 
