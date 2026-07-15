@@ -44,7 +44,7 @@ const useCases = [
     title: "Increase Productivity",
     body: "Evaluate organizational performance through scientifically validated insights that identify strengths, performance gaps, and opportunities to improve leadership, culture, operations, training, and service delivery.",
     tools: "Organizational Development",
-    toolLabel: "DISC Tool",
+    toolLabel: "DISC Tools",
   },
   {
     title: "Increase Sales",
@@ -75,7 +75,7 @@ const useCases = [
     title: "Boost Self-Awareness",
     body: "Greater self-awareness is the foundation of personal and professional growth. The DISC Awareness Assessment helps individuals understand their behavioural style, communication preferences, strengths, and development opportunities to improve collaboration and build stronger relationships.",
     tools: "Awareness",
-    toolLabel: "DISC Tool",
+    toolLabel: "DISC Tools",
   },
   {
     title: "Create Harmony Across Every Relationship",
