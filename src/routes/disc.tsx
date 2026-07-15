@@ -84,9 +84,6 @@ const useCases = [
   },
 ];
 
-const useCaseClass = "text-sm text-white/95 leading-relaxed text-justify";
-
-
 const products = [
   {
     name: "DISC EIQ",
