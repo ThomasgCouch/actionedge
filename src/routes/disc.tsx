@@ -225,7 +225,7 @@ function DiscPage() {
               className={`group relative rounded-none bg-[var(--muted)] border border-[var(--brand-green)]/10 p-8 flex flex-col h-full hover:shadow-[0_12px_40px_-12px_color-mix(in_oklab,var(--brand-green)_20%,transparent)] hover:-translate-y-1 transition-all duration-300 ${i === useCases.length - 1 ? "lg:row-start-4" : ""}`}
             >
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[var(--brand-green)] to-[var(--brand-blue)] opacity-80 group-hover:opacity-100 transition-opacity" />
-              <div className="flex items-center gap-3 mb-4">
+              <div className="flex items-start gap-3 mb-4">
                 <span className="w-9 h-9 rounded-full bg-[var(--brand-green)]/10 text-[var(--brand-green)] flex items-center justify-center text-sm font-bold group-hover:bg-[var(--brand-green)] group-hover:text-white transition-colors">
                   {String(i + 1).padStart(2, "0")}
                 </span>
