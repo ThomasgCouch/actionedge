@@ -42,13 +42,15 @@ export function Newsletter() {
 }
 
 export function Footer() {
-  const quickLinks = [
-    { label: "Home", to: "/" as const },
-    { label: "About", to: "/about" as const },
+  const serviceLinks = [
     { label: "Strategic Thinking", to: "/strategic-thinking" as const },
     { label: "People Development", to: "/people-development" as const },
     { label: "Org Design & Culture", to: "/org-design-culture" as const },
     { label: "DISC", to: "/disc" as const },
+  ];
+
+  const companyLinks = [
+    { label: "About", to: "/about" as const },
     { label: "Events", to: "/events" as const },
     { label: "Contact", to: "/contact" as const },
   ];
@@ -60,9 +62,9 @@ export function Footer() {
 
   return (
     <footer className="border-t border-border bg-[var(--brand-white)]">
-      <div className="mx-auto max-w-7xl px-6 md:px-10 py-14 md:py-18">
-        <div className="grid md:grid-cols-[1.5fr_1fr_1fr] gap-10 md:gap-12">
-          <div>
+      <div className="mx-auto max-w-7xl px-6 md:px-10 py-14 md:py-20">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
+          <div className="col-span-2 md:col-span-1">
             <Link to="/" className="inline-flex items-center">
               <img src={logoAsset.url} alt="ActionEDGE" className="h-14 w-auto object-contain" />
             </Link>
@@ -73,10 +75,28 @@ export function Footer() {
 
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--brand-green)] mb-5">
-              Quick Links
+              Services
             </h4>
-            <ul className="space-y-2.5">
-              {quickLinks.map((link) => (
+            <ul className="space-y-3">
+              {serviceLinks.map((link) => (
+                <li key={link.to}>
+                  <Link
+                    to={link.to}
+                    className="text-sm text-[var(--brand-grey)] hover:text-[var(--brand-blue)] transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--brand-green)] mb-5">
+              Company
+            </h4>
+            <ul className="space-y-3">
+              {companyLinks.map((link) => (
                 <li key={link.to}>
                   <Link
                     to={link.to}
@@ -100,11 +120,10 @@ export function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[var(--brand-green)] text-white text-sm font-medium hover:bg-[var(--brand-blue)] transition-colors"
+                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[var(--brand-green)] text-white hover:bg-[var(--brand-blue)] transition-colors"
                   aria-label={`Follow on ${social.label}`}
                 >
-                  <social.icon className="w-4 h-4" />
-                  {social.label}
+                  <social.icon className="w-5 h-5" />
                 </a>
               ))}
             </div>
@@ -119,9 +138,14 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-[var(--border)] text-sm text-[var(--brand-grey)] flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="mt-14 pt-8 border-t border-[var(--border)] text-sm text-[var(--brand-grey)] flex flex-col md:flex-row items-center justify-between gap-4">
           <p>© {new Date().getFullYear()} ActionEDGE TT. Strategy, People & Culture.</p>
-          <p>Designed for measurable growth.</p>
+          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
+            <Link to="/" className="hover:text-[var(--brand-blue)] transition-colors">Home</Link>
+            <Link to="/about" className="hover:text-[var(--brand-blue)] transition-colors">About</Link>
+            <Link to="/contact" className="hover:text-[var(--brand-blue)] transition-colors">Contact</Link>
+            <a href="https://zcform.com/1Dr6r" target="_blank" rel="noreferrer" className="hover:text-[var(--brand-blue)] transition-colors">Book a Call</a>
+          </div>
         </div>
       </div>
     </footer>
