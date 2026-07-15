@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { Linkedin, Instagram } from "lucide-react";
 import logoAsset from "@/assets/actionedge-logo.jpeg.asset.json";
 
 export function Newsletter() {
