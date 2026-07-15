@@ -31,32 +31,61 @@ const styles = [
 
 const useCases = [
   {
-    title: "Leadership Development",
-    body: "The more leaders understand themselves, the more equipped they are to lead others. DISC provides deep insight into their own behavioural tendencies, strengths, and the impact they have on others.",
+    title: "Create World-Class Leaders",
+    body: "Effective leadership requires more than experience. It demands continuous development, greater self-awareness, and the ability to lead people, navigate change, and inspire high performance.",
+    tools: "Leadership and Leadership Effectiveness 360",
   },
   {
-    title: "Hiring & Selection",
-    body: "DISC helps organizations select candidates whose behavioural style aligns with the role. Reduce turnover, boost retention, and hire with confidence.",
+    title: "Improve Hiring and Selection",
+    body: "Great hiring goes beyond resumes and interviews. Gain deeper insight into how candidates think, communicate, and perform so you can identify the right fit, reduce hiring risk, and build stronger teams.",
+    tools: "Workplace and Executive Insights, and HireSense",
   },
   {
-    title: "Performance Evaluation",
-    body: "The tools to identify strengths and struggles before they become barriers. In the workplace, they establish clear benchmarks for improvement.",
+    title: "Increase Productivity",
+    body: "Evaluate organizational performance through scientifically validated insights that identify strengths, performance gaps, and opportunities to improve leadership, culture, operations, training, and service delivery.",
+    tools: "Organizational Development",
+    toolLabel: "DISC Tool",
   },
   {
-    title: "Sales Training",
-    body: "DISC training is used to help sales teams identify observable behaviours of a customer and adapt their approach to match the customer's buying style.",
+    title: "Increase Sales",
+    body: "Empower your sales team to sell with greater confidence, adaptability, and impact. Through behavioural insights, they learn to recognize customer needs, strengthen relationships, and maximize their effectiveness throughout the sales journey.",
+    tools: "Sales and Sales IQ Plus",
   },
   {
-    title: "Communication Management",
-    body: "Use DISC to help clarify and understand where conflict arises, when better behavioural styles improve your team's communication, engagement, and long-term success.",
+    title: "Reduce Employee Turnover",
+    body: "Strengthen employee engagement by creating a culture where people feel recognized, supported, and motivated to contribute to shared organizational goals.",
+    tools: "Motivators",
   },
   {
-    title: "Customer Service",
-    body: "Use DISC to fine-tune how to exceed customer expectations. Convert every service interaction into a positive experience, regardless of the customer's buying style.",
+    title: "Create Connected Teams",
+    body: "Develop teams that communicate effectively, embrace feedback, and build stronger working relationships through greater emotional intelligence and behavioural awareness.",
+    tools: "Emotional Intelligence",
+  },
+  {
+    title: "Build Core Competencies",
+    body: "Build a stronger workforce by identifying the core competencies that drive success. Gain valuable insights into skills, behaviours, and development opportunities to improve performance, support strategic goals, and foster a culture of continuous growth.",
+    tools: "Core Competency Index",
+  },
+  {
+    title: "Model Team Building",
+    body: "Build high-performing teams by matching complementary strengths, behavioural styles, and capabilities to improve collaboration, efficiency, and workplace culture.",
+    tools: "Team Dynamics",
+  },
+  {
+    title: "Boost Self-Awareness",
+    body: "Greater self-awareness is the foundation of personal and professional growth. The DISC Awareness Assessment helps individuals understand their behavioural style, communication preferences, strengths, and development opportunities to improve collaboration and build stronger relationships.",
+    tools: "Awareness",
+    toolLabel: "DISC Tool",
+  },
+  {
+    title: "Create Harmony Across Every Relationship",
+    body: "DISC helps individuals, couples, parents, and children strengthen communication, deepen understanding, and create greater harmony in every relationship.",
+    tools: "Kids, Relationships and Couples",
   },
 ];
 
 const useCaseClass = "text-sm text-white/95 leading-relaxed text-justify";
+
 
 const products = [
   {
