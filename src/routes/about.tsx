@@ -246,7 +246,7 @@ function AboutPage() {
       </section>
 
       {/* Divider */}
-      <div className="h-1 bg-[var(--brand-green)]" />
+      <div className="h-1 bg-[var(--brand-grey)]" />
 
       {/* Values */}
       <section className="bg-[var(--brand-beige)]/10">
