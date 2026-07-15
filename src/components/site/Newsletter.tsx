@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Linkedin, Instagram } from "lucide-react";
-import logoAsset from "@/assets/actionedge-logo.jpeg.asset.json";
+import footerLogoAsset from "@/assets/actionedge-logo-green-cropped.png.asset.json";
 
 export function Newsletter() {
   return (
@@ -61,17 +61,17 @@ export function Footer() {
   ];
 
   return (
-    <footer className="border-t border-border bg-background">
+    <footer className="border-t border-white/10 bg-[var(--brand-green)]">
       <div className="mx-auto max-w-7xl px-6 md:px-10 py-14 md:py-20">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10 items-start">
           <div className="col-span-2 md:col-span-1 flex flex-col">
             <Link to="/" className="inline-flex items-start">
-              <img src={logoAsset.url} alt="ActionEDGE" className="h-16 md:h-20 w-auto object-contain" />
+              <img src={footerLogoAsset.url} alt="ActionEDGE" className="h-16 md:h-20 w-auto object-contain" />
             </Link>
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--brand-green)] mb-5">
+            <h4 className="text-sm font-semibold uppercase tracking-[0.18em] text-white/90 mb-5">
               Services
             </h4>
             <ul className="space-y-3">
@@ -79,7 +79,7 @@ export function Footer() {
                 <li key={link.to}>
                   <Link
                     to={link.to}
-                    className="text-sm text-[var(--brand-grey)] hover:text-[var(--brand-blue)] transition-colors"
+                    className="text-sm text-white/80 hover:text-white transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -89,7 +89,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--brand-green)] mb-5">
+            <h4 className="text-sm font-semibold uppercase tracking-[0.18em] text-white/90 mb-5">
               Company
             </h4>
             <ul className="space-y-3">
@@ -97,7 +97,7 @@ export function Footer() {
                 <li key={link.to}>
                   <Link
                     to={link.to}
-                    className="text-sm text-[var(--brand-grey)] hover:text-[var(--brand-blue)] transition-colors"
+                    className="text-sm text-white/80 hover:text-white transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -107,7 +107,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--brand-green)] mb-5">
+            <h4 className="text-sm font-semibold uppercase tracking-[0.18em] text-white/90 mb-5">
               Connect
             </h4>
             <div className="flex flex-wrap gap-3">
@@ -117,7 +117,7 @@ export function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[var(--brand-green)] text-white hover:bg-[var(--brand-blue)] transition-colors"
+                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white text-[var(--brand-green)] hover:bg-[var(--brand-blue)] hover:text-white transition-colors"
                   aria-label={`Follow on ${social.label}`}
                 >
                   <social.icon className="w-5 h-5" />
@@ -128,14 +128,14 @@ export function Footer() {
               href="https://zcform.com/1Dr6r"
               target="_blank"
               rel="noreferrer"
-              className="mt-5 inline-flex text-sm font-medium text-[var(--brand-blue)] hover:text-[var(--brand-green)] transition-colors"
+              className="mt-5 inline-flex text-sm font-medium text-white hover:text-[var(--brand-blue)] transition-colors"
             >
               Book a discovery call →
             </a>
           </div>
         </div>
 
-        <div className="mt-14 pt-8 border-t border-[var(--border)] text-sm text-[var(--brand-grey)] flex flex-col md:flex-row items-center justify-center gap-4">
+        <div className="mt-14 pt-8 border-t border-white/20 text-sm text-white/70 flex flex-col md:flex-row items-center justify-center gap-4">
           <p>© {new Date().getFullYear()} ActionEDGE TT. Strategy, People & Culture.</p>
         </div>
 
