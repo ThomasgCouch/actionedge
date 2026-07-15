@@ -119,7 +119,7 @@ function DiscPage() {
           {styles.map((s) => (
             <article
               key={s.letter}
-              className="rounded-3xl border-2 p-8 text-center bg-white hover:-translate-y-1 hover:shadow-lg transition-all"
+              className="rounded-3xl border-2 p-8 text-center bg-[var(--muted)] hover:-translate-y-1 hover:shadow-lg transition-all"
               style={{ borderColor: s.color }}
             >
               <div
