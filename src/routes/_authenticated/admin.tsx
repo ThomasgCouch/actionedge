@@ -136,6 +136,27 @@ function AdminPage() {
     await load();
   }
 
+  async function move(index: number, direction: -1 | 1) {
+    const target = index + direction;
+    if (target < 0 || target >= events.length) return;
+    const a = events[index];
+    const b = events[target];
+    // Optimistic UI
+    const next = [...events];
+    next[index] = { ...b, sort_order: a.sort_order };
+    next[target] = { ...a, sort_order: b.sort_order };
+    setEvents(next);
+    // Two-step swap to avoid unique-index conflicts if ever added
+    const tmp = -Math.abs(a.sort_order) - 1;
+    const s1 = await supabase.from("events").update({ sort_order: tmp }).eq("id", a.id);
+    if (s1.error) { setError(s1.error.message); await load(); return; }
+    const s2 = await supabase.from("events").update({ sort_order: a.sort_order }).eq("id", b.id);
+    if (s2.error) { setError(s2.error.message); await load(); return; }
+    const s3 = await supabase.from("events").update({ sort_order: b.sort_order }).eq("id", a.id);
+    if (s3.error) { setError(s3.error.message); await load(); return; }
+    await load();
+  }
+
   async function signOut() {
     await supabase.auth.signOut();
     navigate({ to: "/auth" });
