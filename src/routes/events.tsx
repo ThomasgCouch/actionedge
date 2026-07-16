@@ -11,6 +11,7 @@ type EventItem = {
   date: string;
   location: string;
   registerUrl?: string;
+  imageUrl?: string;
 };
 
 export const Route = createFileRoute("/events")({
@@ -33,22 +34,34 @@ function EventsPage() {
   const [events, setEvents] = useState<EventItem[]>([]);
 
   useEffect(() => {
-    supabase
-      .from("events")
-      .select("title,badge,description,event_date,location,register_url")
-      .order("sort_order", { ascending: true })
-      .then(({ data }) => {
-        setEvents(
-          (data ?? []).map((r) => ({
-            title: r.title,
-            badge: r.badge,
-            description: r.description,
-            date: r.event_date,
-            location: r.location,
-            registerUrl: r.register_url ?? undefined,
-          })),
-        );
-      });
+    (async () => {
+      const { data } = await supabase
+        .from("events")
+        .select("title,badge,description,event_date,location,register_url,image_url")
+        .order("sort_order", { ascending: true });
+      const rows = data ?? [];
+      const paths = rows.map((r) => r.image_url).filter((p): p is string => !!p);
+      const signed: Record<string, string> = {};
+      if (paths.length) {
+        const { data: signs } = await supabase.storage
+          .from("event-images")
+          .createSignedUrls(paths, 60 * 60);
+        (signs ?? []).forEach((s) => {
+          if (s.path && s.signedUrl) signed[s.path] = s.signedUrl;
+        });
+      }
+      setEvents(
+        rows.map((r) => ({
+          title: r.title,
+          badge: r.badge,
+          description: r.description,
+          date: r.event_date,
+          location: r.location,
+          registerUrl: r.register_url ?? undefined,
+          imageUrl: r.image_url ? signed[r.image_url] : undefined,
+        })),
+      );
+    })();
   }, []);
 
   return (
@@ -105,13 +118,24 @@ function EventsPage() {
                   >
                     {event.badge}
                   </span>
-                  <h3
-                    className={`mt-6 text-xl font-bold ${
-                      isGreen ? "text-white" : "text-[var(--brand-green)]"
-                    }`}
-                  >
-                    {event.title}
-                  </h3>
+                  <div className="mt-6 flex items-center gap-4">
+                    {event.imageUrl && (
+                      <img
+                        src={event.imageUrl}
+                        alt=""
+                        className={`h-14 w-14 rounded-xl object-contain shrink-0 ${
+                          isGreen ? "bg-white/95 p-1" : "bg-[var(--muted)] p-1"
+                        }`}
+                      />
+                    )}
+                    <h3
+                      className={`text-xl font-bold ${
+                        isGreen ? "text-white" : "text-[var(--brand-green)]"
+                      }`}
+                    >
+                      {event.title}
+                    </h3>
+                  </div>
                   <p
                     className={`mt-3 flex-1 ${
                       isGreen ? "text-white/90" : "text-muted-foreground"

@@ -22,6 +22,7 @@ type EventRow = {
   location: string;
   register_url: string | null;
   sort_order: number;
+  image_url: string | null;
 };
 
 const emptyForm = {
@@ -32,6 +33,7 @@ const emptyForm = {
   location: "",
   register_url: "",
   sort_order: 0,
+  image_url: "" as string,
 };
 
 function AdminPage() {
@@ -86,6 +88,7 @@ function AdminPage() {
       location: ev.location,
       register_url: ev.register_url ?? "",
       sort_order: ev.sort_order,
+      image_url: ev.image_url ?? "",
     });
     setError(null);
   }
@@ -108,6 +111,7 @@ function AdminPage() {
       location: form.location.trim(),
       register_url: form.register_url.trim() || null,
       sort_order: Number(form.sort_order) || 0,
+      image_url: form.image_url.trim() || null,
     };
     try {
       if (editingId === "new") {
@@ -128,10 +132,14 @@ function AdminPage() {
 
   async function remove(id: string) {
     if (!confirm("Delete this event? This cannot be undone.")) return;
+    const target = events.find((e) => e.id === id);
     const { error } = await supabase.from("events").delete().eq("id", id);
     if (error) {
       setError(error.message);
       return;
+    }
+    if (target?.image_url) {
+      await supabase.storage.from("event-images").remove([target.image_url]);
     }
     await load();
   }
@@ -221,6 +229,12 @@ function AdminPage() {
                       />
                     </label>
                   </div>
+                  <div className="md:col-span-2">
+                    <ImageUpload
+                      value={form.image_url}
+                      onChange={(v) => setForm({ ...form, image_url: v })}
+                    />
+                  </div>
                 </div>
                 {error && <p className="text-sm text-red-600 mt-4">{error}</p>}
                 <div className="mt-6 flex gap-3">
@@ -243,18 +257,21 @@ function AdminPage() {
                   key={ev.id}
                   className="rounded-2xl bg-white border border-[var(--brand-green)]/15 p-5 flex flex-wrap items-start justify-between gap-4"
                 >
-                  <div className="flex-1 min-w-[240px]">
-                    <div className="flex items-center gap-2 flex-wrap">
-                      <span className="text-xs px-2 py-0.5 rounded-full bg-[var(--brand-green)]/10 text-[var(--brand-green)] font-semibold uppercase tracking-wider">
-                        {ev.badge}
-                      </span>
-                      <span className="text-xs text-muted-foreground">Position {index + 1}</span>
+                  <div className="flex-1 min-w-[240px] flex gap-3">
+                    <EventThumb path={ev.image_url} />
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <span className="text-xs px-2 py-0.5 rounded-full bg-[var(--brand-green)]/10 text-[var(--brand-green)] font-semibold uppercase tracking-wider">
+                          {ev.badge}
+                        </span>
+                        <span className="text-xs text-muted-foreground">Position {index + 1}</span>
+                      </div>
+                      <h3 className="font-bold text-[var(--brand-green)] mt-2">{ev.title}</h3>
+                      <p className="text-sm text-muted-foreground mt-1 line-clamp-2">{ev.description}</p>
+                      <p className="text-xs text-muted-foreground mt-2">
+                        {ev.event_date} · {ev.location}
+                      </p>
                     </div>
-                    <h3 className="font-bold text-[var(--brand-green)] mt-2">{ev.title}</h3>
-                    <p className="text-sm text-muted-foreground mt-1 line-clamp-2">{ev.description}</p>
-                    <p className="text-xs text-muted-foreground mt-2">
-                      {ev.event_date} · {ev.location}
-                    </p>
                   </div>
                   <div className="flex gap-2 items-center">
                     <div className="flex flex-col gap-1">
@@ -321,5 +338,100 @@ function Field({
         className="mt-1 w-full rounded-xl border border-[var(--brand-grey)]/30 px-4 py-2.5 focus:border-[var(--brand-green)] outline-none"
       />
     </label>
+  );
+}
+
+function useSignedUrl(path: string | null | undefined) {
+  const [url, setUrl] = useState<string | null>(null);
+  useEffect(() => {
+    let cancelled = false;
+    if (!path) { setUrl(null); return; }
+    supabase.storage.from("event-images").createSignedUrl(path, 60 * 60).then(({ data }) => {
+      if (!cancelled) setUrl(data?.signedUrl ?? null);
+    });
+    return () => { cancelled = true; };
+  }, [path]);
+  return url;
+}
+
+function ImageUpload({ value, onChange }: { value: string; onChange: (v: string) => void }) {
+  const [uploading, setUploading] = useState(false);
+  const [err, setErr] = useState<string | null>(null);
+  const preview = useSignedUrl(value || null);
+
+  async function handleFile(file: File) {
+    setErr(null);
+    if (!/^image\/(png|jpe?g|webp|gif|svg\+xml)$/.test(file.type)) {
+      setErr("Please choose a PNG, JPG, WEBP, GIF or SVG image.");
+      return;
+    }
+    if (file.size > 5 * 1024 * 1024) {
+      setErr("Image must be under 5 MB.");
+      return;
+    }
+    setUploading(true);
+    const ext = file.name.split(".").pop() || "png";
+    const path = `${crypto.randomUUID()}.${ext}`;
+    const { error } = await supabase.storage.from("event-images").upload(path, file, {
+      cacheControl: "3600",
+      upsert: false,
+      contentType: file.type,
+    });
+    setUploading(false);
+    if (error) { setErr(error.message); return; }
+    // Remove previous image if any
+    if (value) {
+      await supabase.storage.from("event-images").remove([value]);
+    }
+    onChange(path);
+  }
+
+  async function clearImage() {
+    if (value) await supabase.storage.from("event-images").remove([value]);
+    onChange("");
+  }
+
+  return (
+    <div>
+      <span className="text-sm font-semibold text-[var(--brand-grey)]">Event image / logo (optional)</span>
+      <div className="mt-2 flex items-center gap-4 flex-wrap">
+        {preview ? (
+          <img src={preview} alt="Event preview" className="h-20 w-20 object-contain rounded-lg border border-[var(--brand-grey)]/20 bg-white" />
+        ) : (
+          <div className="h-20 w-20 rounded-lg border border-dashed border-[var(--brand-grey)]/30 flex items-center justify-center text-xs text-muted-foreground">
+            No image
+          </div>
+        )}
+        <label className="btn-pill-outline text-sm cursor-pointer">
+          {uploading ? "Uploading…" : value ? "Replace" : "Upload image"}
+          <input
+            type="file"
+            accept="image/png,image/jpeg,image/webp,image/gif,image/svg+xml"
+            className="hidden"
+            disabled={uploading}
+            onChange={(e) => {
+              const f = e.target.files?.[0];
+              if (f) handleFile(f);
+              e.target.value = "";
+            }}
+          />
+        </label>
+        {value && (
+          <button type="button" onClick={clearImage} className="text-sm text-red-700 hover:underline">
+            Remove
+          </button>
+        )}
+      </div>
+      {err && <p className="text-sm text-red-600 mt-2">{err}</p>}
+      <p className="text-xs text-muted-foreground mt-2">PNG, JPG, WEBP, GIF or SVG. Max 5 MB. Square logos look best.</p>
+    </div>
+  );
+}
+
+function EventThumb({ path }: { path: string | null }) {
+  const url = useSignedUrl(path);
+  if (!url) return null;
+  return (
+    <img src={url} alt="" className="h-14 w-14 rounded-lg object-contain bg-white border border-[var(--brand-grey)]/15 shrink-0" />
   );
 }
