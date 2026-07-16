@@ -1,7 +1,17 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
 import { PageShell, PageHero } from "@/components/site/PageShell";
 import { AnimatedCalendar } from "@/components/site/AnimatedAccents";
-import { events } from "@/data/events";
+import { supabase } from "@/integrations/supabase/client";
+
+type EventItem = {
+  title: string;
+  badge: string;
+  description: string;
+  date: string;
+  location: string;
+  registerUrl?: string;
+};
 
 export const Route = createFileRoute("/events")({
   head: () => ({
@@ -20,6 +30,27 @@ export const Route = createFileRoute("/events")({
 });
 
 function EventsPage() {
+  const [events, setEvents] = useState<EventItem[]>([]);
+
+  useEffect(() => {
+    supabase
+      .from("events")
+      .select("title,badge,description,event_date,location,register_url")
+      .order("sort_order", { ascending: true })
+      .then(({ data }) => {
+        setEvents(
+          (data ?? []).map((r) => ({
+            title: r.title,
+            badge: r.badge,
+            description: r.description,
+            date: r.event_date,
+            location: r.location,
+            registerUrl: r.register_url ?? undefined,
+          })),
+        );
+      });
+  }, []);
+
   return (
     <PageShell>
       <PageHero
@@ -27,6 +58,7 @@ function EventsPage() {
         title="Transform the way you lead, communicate, and perform."
         intro="Register for an upcoming event and take the next step in your professional journey."
       />
+
 
       <section className="mx-auto max-w-7xl px-6 md:px-10 py-20 md:py-24">
         <div className="flex flex-col items-center mb-12">
