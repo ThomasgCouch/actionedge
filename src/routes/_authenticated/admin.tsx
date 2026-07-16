@@ -238,7 +238,7 @@ function AdminPage() {
               {events.length === 0 && (
                 <p className="text-muted-foreground">No events yet. Click "Add new event" to create one.</p>
               )}
-              {events.map((ev) => (
+              {events.map((ev, index) => (
                 <div
                   key={ev.id}
                   className="rounded-2xl bg-white border border-[var(--brand-green)]/15 p-5 flex flex-wrap items-start justify-between gap-4"
@@ -248,7 +248,7 @@ function AdminPage() {
                       <span className="text-xs px-2 py-0.5 rounded-full bg-[var(--brand-green)]/10 text-[var(--brand-green)] font-semibold uppercase tracking-wider">
                         {ev.badge}
                       </span>
-                      <span className="text-xs text-muted-foreground">#{ev.sort_order}</span>
+                      <span className="text-xs text-muted-foreground">Position {index + 1}</span>
                     </div>
                     <h3 className="font-bold text-[var(--brand-green)] mt-2">{ev.title}</h3>
                     <p className="text-sm text-muted-foreground mt-1 line-clamp-2">{ev.description}</p>
@@ -256,7 +256,27 @@ function AdminPage() {
                       {ev.event_date} · {ev.location}
                     </p>
                   </div>
-                  <div className="flex gap-2">
+                  <div className="flex gap-2 items-center">
+                    <div className="flex flex-col gap-1">
+                      <button
+                        onClick={() => move(index, -1)}
+                        disabled={index === 0}
+                        title="Move up"
+                        aria-label="Move up"
+                        className="w-8 h-8 rounded-full border border-[var(--brand-grey)]/30 text-[var(--brand-grey)] hover:bg-[var(--brand-green)]/10 hover:text-[var(--brand-green)] disabled:opacity-30 disabled:cursor-not-allowed flex items-center justify-center leading-none"
+                      >
+                        ↑
+                      </button>
+                      <button
+                        onClick={() => move(index, 1)}
+                        disabled={index === events.length - 1}
+                        title="Move down"
+                        aria-label="Move down"
+                        className="w-8 h-8 rounded-full border border-[var(--brand-grey)]/30 text-[var(--brand-grey)] hover:bg-[var(--brand-green)]/10 hover:text-[var(--brand-green)] disabled:opacity-30 disabled:cursor-not-allowed flex items-center justify-center leading-none"
+                      >
+                        ↓
+                      </button>
+                    </div>
                     <button onClick={() => startEdit(ev)} className="btn-pill-outline text-sm">
                       Edit
                     </button>
