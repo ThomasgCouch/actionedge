@@ -428,4 +428,3 @@ function EventThumb({ path }: { path: string | null }) {
     <img src={url} alt="" className="h-14 w-14 rounded-lg object-contain bg-white border border-[var(--brand-grey)]/15 shrink-0" />
   );
 }
-}
