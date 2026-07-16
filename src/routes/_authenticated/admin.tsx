@@ -111,6 +111,7 @@ function AdminPage() {
       location: form.location.trim(),
       register_url: form.register_url.trim() || null,
       sort_order: Number(form.sort_order) || 0,
+      image_url: form.image_url.trim() || null,
     };
     try {
       if (editingId === "new") {
