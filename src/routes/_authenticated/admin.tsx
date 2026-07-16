@@ -22,6 +22,7 @@ type EventRow = {
   location: string;
   register_url: string | null;
   sort_order: number;
+  image_url: string | null;
 };
 
 const emptyForm = {
@@ -32,6 +33,7 @@ const emptyForm = {
   location: "",
   register_url: "",
   sort_order: 0,
+  image_url: "" as string,
 };
 
 function AdminPage() {
