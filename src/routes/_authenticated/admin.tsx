@@ -333,3 +333,99 @@ function Field({
     </label>
   );
 }
+
+function useSignedUrl(path: string | null | undefined) {
+  const [url, setUrl] = useState<string | null>(null);
+  useEffect(() => {
+    let cancelled = false;
+    if (!path) { setUrl(null); return; }
+    supabase.storage.from("event-images").createSignedUrl(path, 60 * 60).then(({ data }) => {
+      if (!cancelled) setUrl(data?.signedUrl ?? null);
+    });
+    return () => { cancelled = true; };
+  }, [path]);
+  return url;
+}
+
+function ImageUpload({ value, onChange }: { value: string; onChange: (v: string) => void }) {
+  const [uploading, setUploading] = useState(false);
+  const [err, setErr] = useState<string | null>(null);
+  const preview = useSignedUrl(value || null);
+
+  async function handleFile(file: File) {
+    setErr(null);
+    if (!/^image\/(png|jpe?g|webp|gif|svg\+xml)$/.test(file.type)) {
+      setErr("Please choose a PNG, JPG, WEBP, GIF or SVG image.");
+      return;
+    }
+    if (file.size > 5 * 1024 * 1024) {
+      setErr("Image must be under 5 MB.");
+      return;
+    }
+    setUploading(true);
+    const ext = file.name.split(".").pop() || "png";
+    const path = `${crypto.randomUUID()}.${ext}`;
+    const { error } = await supabase.storage.from("event-images").upload(path, file, {
+      cacheControl: "3600",
+      upsert: false,
+      contentType: file.type,
+    });
+    setUploading(false);
+    if (error) { setErr(error.message); return; }
+    // Remove previous image if any
+    if (value) {
+      await supabase.storage.from("event-images").remove([value]);
+    }
+    onChange(path);
+  }
+
+  async function clearImage() {
+    if (value) await supabase.storage.from("event-images").remove([value]);
+    onChange("");
+  }
+
+  return (
+    <div>
+      <span className="text-sm font-semibold text-[var(--brand-grey)]">Event image / logo (optional)</span>
+      <div className="mt-2 flex items-center gap-4 flex-wrap">
+        {preview ? (
+          <img src={preview} alt="Event preview" className="h-20 w-20 object-contain rounded-lg border border-[var(--brand-grey)]/20 bg-white" />
+        ) : (
+          <div className="h-20 w-20 rounded-lg border border-dashed border-[var(--brand-grey)]/30 flex items-center justify-center text-xs text-muted-foreground">
+            No image
+          </div>
+        )}
+        <label className="btn-pill-outline text-sm cursor-pointer">
+          {uploading ? "Uploading…" : value ? "Replace" : "Upload image"}
+          <input
+            type="file"
+            accept="image/png,image/jpeg,image/webp,image/gif,image/svg+xml"
+            className="hidden"
+            disabled={uploading}
+            onChange={(e) => {
+              const f = e.target.files?.[0];
+              if (f) handleFile(f);
+              e.target.value = "";
+            }}
+          />
+        </label>
+        {value && (
+          <button type="button" onClick={clearImage} className="text-sm text-red-700 hover:underline">
+            Remove
+          </button>
+        )}
+      </div>
+      {err && <p className="text-sm text-red-600 mt-2">{err}</p>}
+      <p className="text-xs text-muted-foreground mt-2">PNG, JPG, WEBP, GIF or SVG. Max 5 MB. Square logos look best.</p>
+    </div>
+  );
+}
+
+function EventThumb({ path }: { path: string | null }) {
+  const url = useSignedUrl(path);
+  if (!url) return null;
+  return (
+    <img src={url} alt="" className="h-14 w-14 rounded-lg object-contain bg-white border border-[var(--brand-grey)]/15 shrink-0" />
+  );
+}
+}
