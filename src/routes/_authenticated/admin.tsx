@@ -402,7 +402,7 @@ function ImageUpload({ value, onChange }: { value: string; onChange: (v: string)
             No image
           </div>
         )}
-        <label className="btn-pill-outline text-sm cursor-pointer">
+        <label className="inline-flex items-center justify-center px-5 py-2.5 rounded-full border-[1.5px] border-[var(--brand-green)] text-[var(--brand-green)] hover:bg-[var(--brand-green)] hover:text-white font-medium text-sm cursor-pointer transition-colors">
           {uploading ? "Uploading…" : value ? "Replace" : "Upload image"}
           <input
             type="file"
