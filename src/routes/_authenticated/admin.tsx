@@ -253,18 +253,21 @@ function AdminPage() {
                   key={ev.id}
                   className="rounded-2xl bg-white border border-[var(--brand-green)]/15 p-5 flex flex-wrap items-start justify-between gap-4"
                 >
-                  <div className="flex-1 min-w-[240px]">
-                    <div className="flex items-center gap-2 flex-wrap">
-                      <span className="text-xs px-2 py-0.5 rounded-full bg-[var(--brand-green)]/10 text-[var(--brand-green)] font-semibold uppercase tracking-wider">
-                        {ev.badge}
-                      </span>
-                      <span className="text-xs text-muted-foreground">Position {index + 1}</span>
+                  <div className="flex-1 min-w-[240px] flex gap-3">
+                    <EventThumb path={ev.image_url} />
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <span className="text-xs px-2 py-0.5 rounded-full bg-[var(--brand-green)]/10 text-[var(--brand-green)] font-semibold uppercase tracking-wider">
+                          {ev.badge}
+                        </span>
+                        <span className="text-xs text-muted-foreground">Position {index + 1}</span>
+                      </div>
+                      <h3 className="font-bold text-[var(--brand-green)] mt-2">{ev.title}</h3>
+                      <p className="text-sm text-muted-foreground mt-1 line-clamp-2">{ev.description}</p>
+                      <p className="text-xs text-muted-foreground mt-2">
+                        {ev.event_date} · {ev.location}
+                      </p>
                     </div>
-                    <h3 className="font-bold text-[var(--brand-green)] mt-2">{ev.title}</h3>
-                    <p className="text-sm text-muted-foreground mt-1 line-clamp-2">{ev.description}</p>
-                    <p className="text-xs text-muted-foreground mt-2">
-                      {ev.event_date} · {ev.location}
-                    </p>
                   </div>
                   <div className="flex gap-2 items-center">
                     <div className="flex flex-col gap-1">
