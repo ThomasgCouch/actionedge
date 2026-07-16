@@ -132,10 +132,14 @@ function AdminPage() {
 
   async function remove(id: string) {
     if (!confirm("Delete this event? This cannot be undone.")) return;
+    const target = events.find((e) => e.id === id);
     const { error } = await supabase.from("events").delete().eq("id", id);
     if (error) {
       setError(error.message);
       return;
+    }
+    if (target?.image_url) {
+      await supabase.storage.from("event-images").remove([target.image_url]);
     }
     await load();
   }
