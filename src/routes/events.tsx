@@ -75,7 +75,16 @@ function EventsPage() {
             </p>
           </div>
         ) : (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            className={`grid gap-6 ${
+              events.length === 1
+                ? "grid-cols-1 max-w-2xl mx-auto"
+                : events.length === 2
+                  ? "grid-cols-1 md:grid-cols-2 max-w-5xl mx-auto"
+                  : "md:grid-cols-2 lg:grid-cols-3"
+            }`}
+          >
+
             {events.map((event, i) => {
               const isGreen = i % 3 === 1;
               return (
