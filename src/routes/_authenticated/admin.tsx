@@ -88,6 +88,7 @@ function AdminPage() {
       location: ev.location,
       register_url: ev.register_url ?? "",
       sort_order: ev.sort_order,
+      image_url: ev.image_url ?? "",
     });
     setError(null);
   }
