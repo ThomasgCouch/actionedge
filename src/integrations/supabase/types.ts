@@ -21,6 +21,7 @@ export type Database = {
           description: string
           event_date: string
           id: string
+          image_url: string | null
           location: string
           register_url: string | null
           sort_order: number
@@ -33,6 +34,7 @@ export type Database = {
           description: string
           event_date: string
           id?: string
+          image_url?: string | null
           location: string
           register_url?: string | null
           sort_order?: number
@@ -45,6 +47,7 @@ export type Database = {
           description?: string
           event_date?: string
           id?: string
+          image_url?: string | null
           location?: string
           register_url?: string | null
           sort_order?: number
