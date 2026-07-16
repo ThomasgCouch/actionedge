@@ -118,13 +118,24 @@ function EventsPage() {
                   >
                     {event.badge}
                   </span>
-                  <h3
-                    className={`mt-6 text-xl font-bold ${
-                      isGreen ? "text-white" : "text-[var(--brand-green)]"
-                    }`}
-                  >
-                    {event.title}
-                  </h3>
+                  <div className="mt-6 flex items-center gap-4">
+                    {event.imageUrl && (
+                      <img
+                        src={event.imageUrl}
+                        alt=""
+                        className={`h-14 w-14 rounded-xl object-contain shrink-0 ${
+                          isGreen ? "bg-white/95 p-1" : "bg-[var(--muted)] p-1"
+                        }`}
+                      />
+                    )}
+                    <h3
+                      className={`text-xl font-bold ${
+                        isGreen ? "text-white" : "text-[var(--brand-green)]"
+                      }`}
+                    >
+                      {event.title}
+                    </h3>
+                  </div>
                   <p
                     className={`mt-3 flex-1 ${
                       isGreen ? "text-white/90" : "text-muted-foreground"
