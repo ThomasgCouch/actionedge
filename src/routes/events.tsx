@@ -11,6 +11,7 @@ type EventItem = {
   date: string;
   location: string;
   registerUrl?: string;
+  imageUrl?: string;
 };
 
 export const Route = createFileRoute("/events")({
