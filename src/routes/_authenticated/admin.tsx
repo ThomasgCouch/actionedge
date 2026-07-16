@@ -225,6 +225,12 @@ function AdminPage() {
                       />
                     </label>
                   </div>
+                  <div className="md:col-span-2">
+                    <ImageUpload
+                      value={form.image_url}
+                      onChange={(v) => setForm({ ...form, image_url: v })}
+                    />
+                  </div>
                 </div>
                 {error && <p className="text-sm text-red-600 mt-4">{error}</p>}
                 <div className="mt-6 flex gap-3">
