@@ -38,7 +38,28 @@ VITE_SUPABASE_PUBLISHABLE_KEY
 VITE_SUPABASE_PROJECT_ID
 ```
 
-Push to `main` -> the host rebuilds automatically in about a minute.
+Push to `main` -> the host rebuilds and the live site updates in about a minute.
+
+### Cloudflare Pages step-by-step
+
+1. **Log in to Cloudflare** at https://dash.cloudflare.com (create a free account if you don't have one).
+2. Go to **Workers & Pages** in the left sidebar, then click the **Pages** tab and click **Create project**.
+3. Choose **Connect to Git**. Select your GitHub account/organisation and choose the repository you created in step 1.
+4. Click **Begin setup**.
+5. In the **Build settings** section:
+   - **Project name**: pick anything (e.g. `actionedge-tt`).
+   - **Production branch**: `main`.
+   - **Framework preset**: choose **None** / leave blank.
+   - **Build command**: `npm run build`
+   - **Build output directory**: `dist`
+6. Scroll to **Environment variables (advanced)** and add these three variables with the values from your `.env` file:
+   - `VITE_SUPABASE_URL`
+   - `VITE_SUPABASE_PUBLISHABLE_KEY`
+   - `VITE_SUPABASE_PROJECT_ID`
+7. Click **Save and Deploy**.
+8. Cloudflare Pages will build and deploy. After a minute or two you will get a `*.pages.dev` URL where you can preview the site.
+9. To add your custom domain, go to the Cloudflare Pages project -> **Custom domains** and click **Set up a custom domain**. Enter `actionedgett.com` (and optionally `www.actionedgett.com`). Cloudflare will guide you through DNS — if your domain is already in Cloudflare it usually just needs one click to approve.
+10. Once the custom domain is working and the site looks correct, unpublish from Lovable (**Project Settings -> Unpublish**).
 
 ---
 
