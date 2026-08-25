@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Linkedin, Instagram } from "lucide-react";
-import footerLogoAsset from "@/assets/actionedge-logo-green-cropped.png.asset.json";
+import footerLogoAsset from "@/assets/actionedge-logo-green-cropped.png";
 
 export function Newsletter() {
   return (
@@ -66,7 +66,7 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10 items-start">
           <div className="col-span-2 md:col-span-1 flex flex-col">
             <Link to="/" className="inline-flex items-start">
-              <img src={footerLogoAsset.url} alt="ActionEDGE" className="h-16 md:h-20 w-auto object-contain" />
+              <img src={footerLogoAsset} alt="ActionEDGE" className="h-16 md:h-20 w-auto object-contain" />
             </Link>
           </div>
 
