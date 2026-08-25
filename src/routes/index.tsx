@@ -158,12 +158,12 @@ function Home() {
           </h2>
           <div className="grid md:grid-cols-[1fr_1.4fr] gap-10 md:gap-14 items-start">
             <div className="rounded-3xl overflow-hidden bg-white shadow-xl">
-              <img
-                src={coachAsset.url}
-                alt="Dr. Indira Persad Couch"
-                className="w-full h-full object-cover aspect-[3/4]"
-                loading="lazy"
-              />
+             <img
+  src={coachAsset}
+  alt="Dr. Indira Persad Couch"
+  className="w-full h-full object-cover aspect-[3/4]"
+  loading="lazy"
+/>
             </div>
             <div>
               <p className="text-base uppercase tracking-[0.25em] text-[var(--brand-blue)] font-semibold">
@@ -214,7 +214,7 @@ function Home() {
           </a>
         </div>
         <div className="rounded-3xl overflow-hidden aspect-[4/3] shadow-xl">
-          <img src={ctaAsset.url} alt="Team collaborating on strategy" width={1024} height={768} loading="lazy" className="w-full h-full object-cover" />
+          <img src={ctaAsset} alt="Team collaborating on strategy" width={1024} height={768} loading="lazy" className="w-full h-full object-cover" />
         </div>
       </section>
 
