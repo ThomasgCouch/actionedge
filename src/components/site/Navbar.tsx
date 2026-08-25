@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import logoAsset from "@/assets/actionedge-logo.jpeg.asset.json";
+import logoAsset from "@/assets/actionedge-logo.jpeg";
 
 const links = [
   { to: "/", label: "Home" },
@@ -19,7 +19,7 @@ export function Navbar() {
     <header className="sticky top-0 z-50 bg-background border-b border-border/60">
       <div className="mx-auto max-w-7xl px-6 md:px-10 h-24 flex items-center justify-between">
         <Link to="/" className="flex items-center">
-          <img src={logoAsset.url} alt="ActionEDGE" className="h-16 md:h-20 w-auto object-contain" />
+          <img src={logoAsset} alt="ActionEDGE" className="h-16 md:h-20 w-auto object-contain" />
         </Link>
         <nav className="hidden lg:flex items-center gap-1">
           {links.map((l) => (
