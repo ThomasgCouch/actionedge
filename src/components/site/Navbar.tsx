@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import logoAsset from "@/assets/actionedge-logo (1).jpeg";
+import logoAsset from "@/assets/actionedge-logo.jpeg";
 
 const links = [
   { to: "/", label: "Home" },
