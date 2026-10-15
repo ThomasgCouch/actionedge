@@ -44,5 +44,10 @@ supabase/migrations/ database tables and security policies
 ```
 
 ---
+## License
+
+© 2026 Thomas Couch. All rights reserved.
+This code is shared for portfolio purposes only. The ActionEDGE name, logo, content
+and images belong to ActionEDGE and may not be reused.
 
 Built by [Thomas Couch](https://github.com/ThomasgCouch)
