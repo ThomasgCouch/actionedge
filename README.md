@@ -1,26 +1,57 @@
-# Website Clone Creator
+# ActionEDGE
 
-can you check websites and create another one out of the same information
+**Live site:** [actionedgett.com](https://actionedgett.com/)
 
-This project was built with [Lovable](https://lovable.dev).
+The website for ActionEDGE, a Caribbean leadership and organisational consulting firm. It presents the firm's services, lets visitors book a discovery call or join the mailing list, and includes an admin area for managing upcoming events.
 
-**Live app**: https://actionedge.lovable.app
+<!-- Add a screenshot: drag an image into this file on GitHub, or save one as docs/screenshot.png -->
+<!-- ![ActionEDGE homepage](docs/screenshot.png) -->
 
-## Build with Lovable
+## Features
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/d155bce8-45ee-4ca0-bc4c-6f3adea1cd39).
+- **Service pages:** Strategic Thinking & Execution, People Development, Organisational Design & Culture, and DISC assessments
+- **Events page:** public listing of workshops and events, loaded from the database
+- **Admin dashboard:** a login-protected area where admins create, edit and delete events and upload event images
+- **Role-based access:** Supabase Row Level Security, so anyone can *view* events but only users with the `admin` role can change them
+- **Bookings and newsletter:** discovery-call booking and mailing-list sign-up
+- **Responsive design:** works on mobile, tablet and desktop, with an animated hero section
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+## Tech stack
 
-## Development
+| Area | Tools |
+|---|---|
+| Frontend | React 19, TypeScript, TanStack Start / Router |
+| Styling | Tailwind CSS, shadcn/ui (Radix) |
+| Backend | Supabase (Postgres database, authentication, file storage) |
+| Forms | React Hook Form, Zod |
+| Hosting | Cloudflare |
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+## How it was built
 
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
+I built the site with [Lovable](https://lovable.dev) for initial scaffolding and quick iteration, then refined it from there: the page structure and content, the events system and admin access rules, and deployment to the client's custom domain.
+
+## Running locally
+
+```bash
+git clone https://github.com/ThomasgCouch/actionedge.git
+cd actionedge
+bun install        # or: npm install
+bun run dev        # or: npm run dev
 ```
+
+You'll need a `.env` file with your own Supabase project URL and publishable key (see `.env` for the variable names).
+
+## Project structure
+
+```
+src/
+  routes/            pages (home, about, services, events, contact, admin)
+  components/site/   site components (navbar, hero, newsletter)
+  components/ui/     reusable UI components
+  integrations/      Supabase client and auth
+supabase/migrations/ database tables and security policies
+```
+
+---
+
+Built by [Thomas Couch](https://github.com/ThomasgCouch)
