@@ -28,10 +28,9 @@ The website for ActionEDGE, a Caribbean leadership and organisational consulting
 
 ## How it was built
 
-I built the site with [Lovable](https://lovable.dev) for initial scaffolding and quick iteration, then refined it from there: the page structure and content, the events system and admin access rules, and deployment to the client's custom domain.
+I built the site with [Lovable](https://lovable.dev) for initial scaffolding, quick iteration and for demoing mockup site designs. I refined it from there: the page structure and content, the events system and admin access rules, and deployment to the client's custom domain.
 
 
-You'll need a `.env` file with your own Supabase project URL and publishable key (see `.env` for the variable names).
 
 ## Project structure
 
